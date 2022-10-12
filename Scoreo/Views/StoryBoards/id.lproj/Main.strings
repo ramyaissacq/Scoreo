@@ -1,0 +1,30 @@
+
+/* Class = "UITabBarItem"; title = "Forum"; ObjectID = "0Jo-z5-ah7"; */
+"0Jo-z5-ah7.title" = "Forum";
+
+/* Class = "UIButton"; configuration.title = "Check Pendings"; ObjectID = "3jB-Fb-IPo"; */
+"3jB-Fb-IPo.configuration.title" = "Check Pendings";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3jB-Fb-IPo"; */
+"3jB-Fb-IPo.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "D1U-Sp-Kb6"; */
+"D1U-Sp-Kb6.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Send Notification"; ObjectID = "S1t-bj-mTp"; */
+"S1t-bj-mTp.configuration.title" = "Send Notification";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "S1t-bj-mTp"; */
+"S1t-bj-mTp.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Scores"; ObjectID = "bL6-1i-jR1"; */
+"bL6-1i-jR1.title" = "Skor";
+
+/* Class = "UITabBarItem"; title = "Live"; ObjectID = "c0y-S9-SM5"; */
+"c0y-S9-SM5.title" = "Hidup";
+
+/* Class = "UITabBarItem"; title = "News"; ObjectID = "x4H-k1-kfn"; */
+"x4H-k1-kfn.title" = "Berita";
+
+/* Class = "UITabBarItem"; title = "Awards"; ObjectID = "ypf-Q6-6k1"; */
+"ypf-Q6-6k1.title" = "Penghargaan";

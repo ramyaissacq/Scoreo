@@ -1,0 +1,69 @@
+
+/* Class = "UILabel"; text = "Loading...Please wait a while"; ObjectID = "6lh-RI-IdY"; */
+"6lh-RI-IdY.text" = "Sedang memuat...Harap tunggu sebentar!";
+
+/* Class = "UILabel"; text = "Rule"; ObjectID = "7H6-ae-piF"; */
+"7H6-ae-piF.text" = "Aturan";
+
+/* Class = "UILabel"; text = "Loading...Please wait a while"; ObjectID = "9kd-zV-WjN"; */
+"9kd-zV-WjN.text" = "Sedang memuat...Harap tunggu sebentar!";
+
+/* Class = "UILabel"; text = " "; ObjectID = "B9M-d4-bXQ"; */
+"B9M-d4-bXQ.text" = " ";
+
+/* Class = "UILabel"; text = "Recommendations"; ObjectID = "BLz-N0-93P"; */
+"BLz-N0-93P.text" = "Rekomendasi";
+
+/* Class = "UILabel"; text = "Win/Lose"; ObjectID = "CV1-wQ-9KA"; */
+"CV1-wQ-9KA.text" = "Menang kalah";
+
+/* Class = "UILabel"; text = "Briefing"; ObjectID = "D3p-A4-Dcc"; */
+"D3p-A4-Dcc.text" = "Pengarahan";
+
+/* Class = "UILabel"; text = " Basketball"; ObjectID = "ELl-pb-KnW"; */
+"ELl-pb-KnW.text" = " Bola basket";
+
+/* Class = "UILabel"; text = "Confidence Index"; ObjectID = "GIC-jG-fKS"; */
+"GIC-jG-fKS.text" = "Indeks Keyakinan";
+
+/* Class = "UISearchBar"; placeholder = "Search Matches"; ObjectID = "P2T-hp-PoZ"; */
+"P2T-hp-PoZ.placeholder" = "Cari Pertandingan";
+
+/* Class = "UILabel"; text = "Match Track Record"; ObjectID = "Pcb-zE-PVm"; */
+"Pcb-zE-PVm.text" = "Rekam Jejak Pertandingan";
+
+/* Class = "UILabel"; text = "Loading...Please wait a while"; ObjectID = "Qmc-it-MJp"; */
+"Qmc-it-MJp.text" = "Sedang memuat...Harap tunggu sebentar!";
+
+/* Class = "UILabel"; text = "Today"; ObjectID = "R9l-ed-t4y"; */
+"R9l-ed-t4y.text" = "Hari ini";
+
+/* Class = "UILabel"; text = "Spread"; ObjectID = "WK8-me-q5V"; */
+"WK8-me-q5V.text" = "Sebaran";
+
+/* Class = "UILabel"; text = "Latest Five Games"; ObjectID = "bY8-1Y-a6z"; */
+"bY8-1Y-a6z.text" = "Lima Game Terbaru";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "bkc-Jt-AQT"; */
+"bkc-Jt-AQT.text" = "Total";
+
+/* Class = "UILabel"; text = "Loading...Please wait a while"; ObjectID = "fMz-Y4-UbG"; */
+"fMz-Y4-UbG.text" = "Sedang memuat...Harap tunggu sebentar!";
+
+/* Class = "UILabel"; text = "Loading...Please wait a while"; ObjectID = "gnt-1G-5TK"; */
+"gnt-1G-5TK.text" = "Sedang memuat...Harap tunggu sebentar!";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "hvb-r4-txa"; */
+"hvb-r4-txa.text" = "Keterangan";
+
+/* Class = "UILabel"; text = "Highlights"; ObjectID = "ikx-po-TsT"; */
+"ikx-po-TsT.text" = "Highlights";
+
+/* Class = "UILabel"; text = " "; ObjectID = "rFw-PS-c1b"; */
+"rFw-PS-c1b.text" = " ";
+
+/* Class = "UILabel"; text = " Soccer"; ObjectID = "sNT-QC-0bo"; */
+"sNT-QC-0bo.text" = " Soccer";
+
+/* Class = "UILabel"; text = "Loading...Please wait a while"; ObjectID = "zV0-Oh-sr2"; */
+"zV0-Oh-sr2.text" = "Sedang memuat...Harap tunggu sebentar!";

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="EventTechnicTableViewCell" customModule="_75775Sports" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5be-Di-7M5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iq9-08-I8a">
+                                <rect key="frame" x="15" y="8" width="290" height="0.0"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eV-Jo-Z5f">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHL-2Z-YTe">
+                                        <rect key="frame" x="145" y="0.0" width="0.0" height="0.0"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                        <color key="textColor" name="gray1"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgO-KM-Dn2">
+                                        <rect key="frame" x="290" y="0.0" width="0.0" height="0.0"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="92b-s5-WHF">
+                                <rect key="frame" x="15" y="16" width="290" height="4"/>
+                                <color key="progressTintColor" name="blue3"/>
+                                <color key="trackTintColor" name="orange1"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iq9-08-I8a" firstAttribute="top" secondItem="5be-Di-7M5" secondAttribute="top" constant="8" id="Ijt-OU-3Vh"/>
+                            <constraint firstAttribute="trailing" secondItem="92b-s5-WHF" secondAttribute="trailing" constant="15" id="OhX-sA-FTi"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="92b-s5-WHF" secondAttribute="bottom" constant="8" id="Viv-VA-Wha"/>
+                            <constraint firstItem="92b-s5-WHF" firstAttribute="leading" secondItem="5be-Di-7M5" secondAttribute="leading" constant="15" id="dkn-zU-QCw"/>
+                            <constraint firstItem="iq9-08-I8a" firstAttribute="leading" secondItem="5be-Di-7M5" secondAttribute="leading" constant="15" id="pwe-zm-ojw"/>
+                            <constraint firstAttribute="trailing" secondItem="iq9-08-I8a" secondAttribute="trailing" constant="15" id="qTW-NF-aQs"/>
+                            <constraint firstItem="92b-s5-WHF" firstAttribute="top" secondItem="iq9-08-I8a" secondAttribute="bottom" constant="8" id="xs6-Lh-za3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="5be-Di-7M5" secondAttribute="bottom" id="S10-1a-gr6"/>
+                    <constraint firstItem="5be-Di-7M5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cwV-Gi-T3z"/>
+                    <constraint firstItem="5be-Di-7M5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pIV-L3-r0F"/>
+                    <constraint firstAttribute="trailing" secondItem="5be-Di-7M5" secondAttribute="trailing" id="z4x-Bo-Cm4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblAwayCount" destination="BgO-KM-Dn2" id="YEY-HF-MGz"/>
+                <outlet property="lblHomeCount" destination="0eV-Jo-Z5f" id="oGV-rc-8GH"/>
+                <outlet property="lblName" destination="nHL-2Z-YTe" id="h8O-dt-iSO"/>
+                <outlet property="progressView" destination="92b-s5-WHF" id="tIV-m1-UVN"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="84.375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="blue3">
+            <color red="0.0" green="0.51764705882352946" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray1">
+            <color red="0.48627450980392156" green="0.50980392156862742" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="orange1">
+            <color red="0.98431372549019602" green="0.45882352941176469" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

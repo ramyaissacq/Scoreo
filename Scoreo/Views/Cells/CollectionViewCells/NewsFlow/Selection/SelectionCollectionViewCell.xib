@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SelectionCollectionViewCell" customModule="Scoreo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="69" height="59"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="69" height="59"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CD1-1a-w2d" userLabel="TopView">
+                        <rect key="frame" x="0.0" y="0.0" width="69" height="59"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgl-AH-5dI">
+                                <rect key="frame" x="20" y="54" width="29" height="4"/>
+                                <color key="backgroundColor" name="newGray2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="B3D-Fz-CQb"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3bm-6x-wHK">
+                                <rect key="frame" x="34.5" y="29.5" width="0.0" height="0.0"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKJ-lM-chE">
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3bm-6x-wHK" firstAttribute="centerX" secondItem="CD1-1a-w2d" secondAttribute="centerX" id="2dg-QV-57D"/>
+                            <constraint firstItem="3bm-6x-wHK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CD1-1a-w2d" secondAttribute="leading" constant="8" id="GFB-RO-xGI"/>
+                            <constraint firstAttribute="bottom" secondItem="dgl-AH-5dI" secondAttribute="bottom" constant="1" id="IRq-bw-IPj"/>
+                            <constraint firstItem="dgl-AH-5dI" firstAttribute="leading" secondItem="CD1-1a-w2d" secondAttribute="leading" constant="20" id="WQa-oB-Wud"/>
+                            <constraint firstItem="3bm-6x-wHK" firstAttribute="centerY" secondItem="CD1-1a-w2d" secondAttribute="centerY" id="nuD-Tf-yhg"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3bm-6x-wHK" secondAttribute="trailing" constant="8" id="w2g-hO-fvw"/>
+                            <constraint firstAttribute="trailing" secondItem="dgl-AH-5dI" secondAttribute="trailing" constant="20" id="wDG-hf-qTv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="CD1-1a-w2d" secondAttribute="bottom" id="C0U-sT-KID"/>
+                <constraint firstItem="CD1-1a-w2d" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="JRU-9F-wpO"/>
+                <constraint firstAttribute="trailing" secondItem="CD1-1a-w2d" secondAttribute="trailing" id="hk4-M6-L1h"/>
+                <constraint firstItem="CD1-1a-w2d" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="iJI-Er-1Dg"/>
+            </constraints>
+            <size key="customSize" width="69" height="59"/>
+            <connections>
+                <outlet property="lblTitle" destination="BKJ-lM-chE" id="Vjs-ey-pfX"/>
+                <outlet property="stack" destination="3bm-6x-wHK" id="dbY-33-Vr6"/>
+                <outlet property="underLineView" destination="dgl-AH-5dI" id="8Nk-oF-99R"/>
+            </connections>
+            <point key="canvasLocation" x="145.6521739130435" y="102.79017857142857"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="newGray2">
+            <color red="0.72941176470588232" green="0.72549019607843135" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

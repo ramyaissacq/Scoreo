@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TypesCollectionViewCell" customModule="Scoreo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="53"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="53"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76s-HM-Tl7">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="53"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19S-Wi-0gw">
+                                <rect key="frame" x="10" y="26.5" width="80" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                <color key="textColor" name="appViolet"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="19S-Wi-0gw" firstAttribute="leading" secondItem="76s-HM-Tl7" secondAttribute="leading" constant="10" id="Aud-Pr-hhN"/>
+                            <constraint firstItem="19S-Wi-0gw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="76s-HM-Tl7" secondAttribute="top" constant="4" id="Kso-9v-ouw"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="19S-Wi-0gw" secondAttribute="bottom" constant="4" id="PGH-QP-xl8"/>
+                            <constraint firstAttribute="trailing" secondItem="19S-Wi-0gw" secondAttribute="trailing" constant="10" id="VmB-eh-BVz"/>
+                            <constraint firstItem="19S-Wi-0gw" firstAttribute="centerY" secondItem="76s-HM-Tl7" secondAttribute="centerY" id="dWG-aF-SBm"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="appViolet"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="76s-HM-Tl7" secondAttribute="bottom" id="DyE-4z-ncS"/>
+                <constraint firstItem="76s-HM-Tl7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Fk1-iQ-jv0"/>
+                <constraint firstAttribute="trailing" secondItem="76s-HM-Tl7" secondAttribute="trailing" id="Z9c-pF-BDW"/>
+                <constraint firstItem="76s-HM-Tl7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hdk-B0-oMJ"/>
+            </constraints>
+            <size key="customSize" width="100" height="53"/>
+            <connections>
+                <outlet property="backView" destination="76s-HM-Tl7" id="wP2-cK-PnW"/>
+                <outlet property="lblTitle" destination="19S-Wi-0gw" id="iMk-QD-IdF"/>
+            </connections>
+            <point key="canvasLocation" x="168.11594202898553" y="72.65625"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="appViolet">
+            <color red="0.59215686274509804" green="0.27843137254901962" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

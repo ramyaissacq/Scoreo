@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Guest"; ObjectID = "2N5-WM-786"; */
+"2N5-WM-786.text" = "แขก";
+
+/* Class = "UILabel"; text = "Select Language"; ObjectID = "GR5-dU-MhF"; */
+"GR5-dU-MhF.text" = "เลือกภาษา";
+
+/* Class = "UILabel"; text = "Please"; ObjectID = "d3p-7x-Jbi"; */
+"d3p-7x-Jbi.text" = "Please";
+
+/* Class = "UILabel"; text = "  "; ObjectID = "dYa-kV-hB0"; */
+"dYa-kV-hB0.text" = "  ";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "dyU-qD-Lah"; */
+"dyU-qD-Lah.text" = "เข้าสู่ระบบ";

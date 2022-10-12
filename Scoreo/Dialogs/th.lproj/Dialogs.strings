@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "BWl-G7-vxQ"; */
+"BWl-G7-vxQ.normalTitle" = "No";
+
+/* Class = "UILabel"; text = "Pin Live \nScore"; ObjectID = "FM2-FY-szC"; */
+"FM2-FY-szC.text" = "Pin Live \nScore";
+
+/* Class = "UILabel"; text = "Add \nReminder"; ObjectID = "GWC-7g-y0x"; */
+"GWC-7g-y0x.text" = "Add \nReminder";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "I9w-sx-h2e"; */
+"I9w-sx-h2e.normalTitle" = "OK";
+
+/* Class = "UILabel"; text = "  "; ObjectID = "LAE-xu-kDb"; */
+"LAE-xu-kDb.text" = "  ";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "U62-36-Dtb"; */
+"U62-36-Dtb.normalTitle" = "Confirm";
+
+/* Class = "UILabel"; text = "Add to\nHighlights"; ObjectID = "Ubx-gx-jlV"; */
+"Ubx-gx-jlV.text" = "Add to\nHighlights";
+
+/* Class = "UILabel"; text = "  "; ObjectID = "fHc-cw-ICE"; */
+"fHc-cw-ICE.text" = "  ";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "hZV-Tw-ygg"; */
+"hZV-Tw-ygg.normalTitle" = "Yes";

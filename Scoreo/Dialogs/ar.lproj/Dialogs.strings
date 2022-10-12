@@ -1,0 +1,72 @@
+
+/* Class = "UIButton"; normalTitle = "REVIEW"; ObjectID = "2bT-S0-vWM"; */
+"2bT-S0-vWM.normalTitle" = "التقييم";
+
+/* Class = "UILabel"; text = "How would you like to pay?"; ObjectID = "7ki-1A-XPT"; */
+"7ki-1A-XPT.text" = "كيف تريد طريقة الدفع؟";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "BWl-G7-vxQ"; */
+"BWl-G7-vxQ.normalTitle" = "لا";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BXE-qS-Qt1"; */
+"BXE-qS-Qt1.text" = "Label";
+
+/* Class = "UILabel"; text = "Create Room"; ObjectID = "BiN-lH-qIA"; */
+"BiN-lH-qIA.text" = "إنشاء غرفة";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "I9w-sx-h2e"; */
+"I9w-sx-h2e.normalTitle" = "موافق";
+
+/* Class = "UILabel"; text = "your order has been placed successfully"; ObjectID = "LAE-xu-kDb"; */
+"LAE-xu-kDb.text" = "تم وضع طلبك بنجاح";
+
+/* Class = "UILabel"; text = "Specific Room"; ObjectID = "MnZ-eK-hf5"; */
+"MnZ-eK-hf5.text" = "غرفة دردشة محددة";
+
+/* Class = "UILabel"; text = "Select From Packages"; ObjectID = "P7M-Le-eB6"; */
+"P7M-Le-eB6.text" = "حدد من الحزم";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "PHf-Ad-Ul3"; */
+"PHf-Ad-Ul3.normalTitle" = "التالي";
+
+/* Class = "UILabel"; text = "Shabab Al Ahli Club"; ObjectID = "RDm-Kf-caz"; */
+"RDm-Kf-caz.text" = "Shabab Al Ahli Club";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "U62-36-Dtb"; */
+"U62-36-Dtb.normalTitle" = "تأكيد";
+
+/* Class = "UILabel"; text = "Room That Is Linked To A Defined Sport That You \nAlready Booked It"; ObjectID = "WQy-mA-wBR"; */
+"WQy-mA-wBR.text" = "غرفة مرتبطة برياضة محددة حجزتها بالفعل";
+
+/* Class = "UILabel"; text = "Public Room"; ObjectID = "bGN-2u-Ull"; */
+"bGN-2u-Ull.text" = "غرفة الدردشة العامة";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "fHc-cw-ICE"; */
+"fHc-cw-ICE.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "hZV-Tw-ygg"; */
+"hZV-Tw-ygg.normalTitle" = "نعم";
+
+/* Class = "UILabel"; text = "Room Type"; ObjectID = "iw1-bH-eor"; */
+"iw1-bH-eor.text" = "نوع الغرفة";
+
+/* Class = "UIButton"; normalTitle = "CREATE ROOM"; ObjectID = "o3u-Xq-tER"; */
+"o3u-Xq-tER.normalTitle" = "إنشاء غرفة";
+
+/* Class = "UILabel"; text = "20.00 AED"; ObjectID = "pYT-TI-Ude"; */
+"pYT-TI-Ude.text" = "20.00 AED";
+
+/* Class = "UITextView"; text = " "; ObjectID = "poq-Gp-Niw"; */
+"poq-Gp-Niw.text" = " ";
+
+/* Class = "UILabel"; text = "Sunday"; ObjectID = "rof-aj-V5n"; */
+"rof-aj-V5n.text" = "Sunday";
+
+/* Class = "UITextField"; placeholder = "Room Name"; ObjectID = "utJ-kN-ApX"; */
+"utJ-kN-ApX.placeholder" = "Room Name";
+
+/* Class = "UILabel"; text = "This Time"; ObjectID = "w95-we-4Jh"; */
+"w95-we-4Jh.text" = "الآن";
+
+/* Class = "UIButton"; normalTitle = "Later"; ObjectID = "zpo-de-qkp"; */
+"zpo-de-qkp.normalTitle" = "فيما بعد";

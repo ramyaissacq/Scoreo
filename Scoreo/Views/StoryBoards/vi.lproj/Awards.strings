@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Liverpool"; ObjectID = "8cA-yD-ndP"; */
+"8cA-yD-ndP.text" = "Liverpool";
+
+/* Class = "UILabel"; text = "Choose Sports"; ObjectID = "Afs-eR-Mhb"; */
+"Afs-eR-Mhb.text" = "Chọn thể thao";
+
+/* Class = "UILabel"; text = "Choose League"; ObjectID = "JgD-Wc-o9G"; */
+"JgD-Wc-o9G.text" = "Chọn giải đấu";
+
+/* Class = "UILabel"; text = "Loading...Please wait a while!"; ObjectID = "MDy-yx-Sb5"; */
+"MDy-yx-Sb5.text" = "Đang tải ... Vui lòng đợi trong giây lát!";

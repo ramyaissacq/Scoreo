@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "BWl-G7-vxQ"; */
+"BWl-G7-vxQ.normalTitle" = "不";
+
+/* Class = "UILabel"; text = "Pin Live \nScore"; ObjectID = "FM2-FY-szC"; */
+"FM2-FY-szC.text" = "固定直播\n分数";
+
+/* Class = "UILabel"; text = "Add \nReminder"; ObjectID = "GWC-7g-y0x"; */
+"GWC-7g-y0x.text" = "添加\n提醒";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "I9w-sx-h2e"; */
+"I9w-sx-h2e.normalTitle" = "好的";
+
+/* Class = "UILabel"; text = "your order has been placed successfully"; ObjectID = "LAE-xu-kDb"; */
+"LAE-xu-kDb.text" = "your order has been placed successfully";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "U62-36-Dtb"; */
+"U62-36-Dtb.normalTitle" = "确认";
+
+/* Class = "UILabel"; text = "Add to\nHighlights"; ObjectID = "Ubx-gx-jlV"; */
+"Ubx-gx-jlV.text" = "添加到\n亮点";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "fHc-cw-ICE"; */
+"fHc-cw-ICE.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "hZV-Tw-ygg"; */
+"hZV-Tw-ygg.normalTitle" = "是的";

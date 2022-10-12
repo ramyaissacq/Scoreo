@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TitleCollectionViewCell" customModule="Core_Score" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="109" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="109" height="68"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpm-or-T1G">
+                        <rect key="frame" x="0.0" y="0.0" width="109" height="68"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTI-q5-6fA">
+                                <rect key="frame" x="0.0" y="34" width="109" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UTI-q5-6fA" secondAttribute="bottom" id="1ji-FA-PEd"/>
+                            <constraint firstAttribute="trailing" secondItem="UTI-q5-6fA" secondAttribute="trailing" id="Mw4-63-zxI"/>
+                            <constraint firstItem="UTI-q5-6fA" firstAttribute="centerY" secondItem="jpm-or-T1G" secondAttribute="centerY" id="Opj-Oc-IYN"/>
+                            <constraint firstItem="UTI-q5-6fA" firstAttribute="leading" secondItem="jpm-or-T1G" secondAttribute="leading" id="WHs-u1-Mvd"/>
+                            <constraint firstItem="UTI-q5-6fA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jpm-or-T1G" secondAttribute="top" id="d6Y-fG-BlU"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="jpm-or-T1G" secondAttribute="trailing" id="KPT-e1-EfX"/>
+                <constraint firstItem="jpm-or-T1G" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="T0f-0L-GI3"/>
+                <constraint firstItem="jpm-or-T1G" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UtR-LK-btO"/>
+                <constraint firstAttribute="bottom" secondItem="jpm-or-T1G" secondAttribute="bottom" id="dGm-eF-AB1"/>
+            </constraints>
+            <size key="customSize" width="109" height="68"/>
+            <connections>
+                <outlet property="lblTitle" destination="UTI-q5-6fA" id="Pkt-pU-VSV"/>
+            </connections>
+            <point key="canvasLocation" x="174.63768115942031" y="93.75"/>
+        </collectionViewCell>
+    </objects>
+</document>

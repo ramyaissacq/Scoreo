@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ResultCollectionViewCell" customModule="_75775Sports" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IcH-5m-7BA">
+                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYm-du-4r2">
+                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJs-sN-94k">
+                                        <rect key="frame" x="10" y="10" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstItem="zJs-sN-94k" firstAttribute="centerX" secondItem="rYm-du-4r2" secondAttribute="centerX" id="Jp1-zp-5Hy"/>
+                                    <constraint firstItem="zJs-sN-94k" firstAttribute="centerY" secondItem="rYm-du-4r2" secondAttribute="centerY" id="N4Z-nj-YkL"/>
+                                    <constraint firstAttribute="height" constant="20" id="p1a-Js-sc1"/>
+                                    <constraint firstAttribute="width" constant="20" id="uPH-Te-JWe"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rYm-du-4r2" firstAttribute="top" secondItem="IcH-5m-7BA" secondAttribute="top" id="28P-nk-Sz6"/>
+                            <constraint firstItem="rYm-du-4r2" firstAttribute="centerX" secondItem="IcH-5m-7BA" secondAttribute="centerX" id="SAU-WD-PnF"/>
+                            <constraint firstItem="rYm-du-4r2" firstAttribute="centerY" secondItem="IcH-5m-7BA" secondAttribute="centerY" id="cT2-pX-0S0"/>
+                            <constraint firstItem="rYm-du-4r2" firstAttribute="leading" secondItem="IcH-5m-7BA" secondAttribute="leading" id="ghl-aR-ueE"/>
+                            <constraint firstAttribute="bottom" secondItem="rYm-du-4r2" secondAttribute="bottom" id="ife-fJ-Q2w"/>
+                            <constraint firstAttribute="trailing" secondItem="rYm-du-4r2" secondAttribute="trailing" id="vp7-Kp-WUO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="IcH-5m-7BA" secondAttribute="bottom" id="XYJ-kX-oWD"/>
+                <constraint firstItem="IcH-5m-7BA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aol-bp-3g2"/>
+                <constraint firstAttribute="trailing" secondItem="IcH-5m-7BA" secondAttribute="trailing" id="nh9-cg-Le3"/>
+                <constraint firstItem="IcH-5m-7BA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="t1g-ex-jrK"/>
+            </constraints>
+            <size key="customSize" width="29" height="30"/>
+            <connections>
+                <outlet property="backView" destination="rYm-du-4r2" id="gOH-RP-wKh"/>
+                <outlet property="lblTitle" destination="zJs-sN-94k" id="XP4-Gb-8fx"/>
+            </connections>
+            <point key="canvasLocation" x="116.66666666666667" y="81.026785714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

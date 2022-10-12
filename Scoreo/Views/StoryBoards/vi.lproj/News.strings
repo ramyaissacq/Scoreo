@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Recommended for you"; ObjectID = "5KX-Cg-VIl"; */
+"5KX-Cg-VIl.text" = "Được đề xuất cho bạn";
+
+/* Class = "UILabel"; text = "Sorry...No News Details Found!"; ObjectID = "7pH-5Q-9dm"; */
+"7pH-5Q-9dm.text" = "Xin lỗi ... Không tìm thấy chi tiết tin tức!";
+
+/* Class = "UIButton"; configuration.title = "See All"; ObjectID = "PXO-s3-uCj"; */
+"PXO-s3-uCj.configuration.title" = "Nhìn thấy tất cả";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PXO-s3-uCj"; */
+"PXO-s3-uCj.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Recommended Videos"; ObjectID = "mLV-PQ-tfW"; */
+"mLV-PQ-tfW.text" = "Video được Đề xuất";
+
+/* Class = "UILabel"; text = "Sorry...No News Found!"; ObjectID = "nJU-hL-tmb"; */
+"nJU-hL-tmb.text" = "Xin lỗi ... Không tìm thấy tin tức nào!";
+
+/* Class = "UILabel"; text = "Recommended for you"; ObjectID = "pcy-gB-hsm"; */
+"pcy-gB-hsm.text" = "Được đề xuất cho bạn";
+
+/* Class = "UIButton"; configuration.title = "See All"; ObjectID = "rui-48-V8C"; */
+"rui-48-V8C.configuration.title" = "Nhìn thấy tất cả";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rui-48-V8C"; */
+"rui-48-V8C.normalTitle" = "Button";

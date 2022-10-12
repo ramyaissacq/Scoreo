@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "startnow_orange@3x.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

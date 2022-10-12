@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MoreCollectionViewCell" customModule="Core_Score" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nl-FN-Pwi">
+                        <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downArrowBlue" translatesAutoresizingMaskIntoConstraints="NO" id="enG-YC-Kpc">
+                                <rect key="frame" x="52" y="7.5" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="8Z3-sG-ZPh"/>
+                                    <constraint firstAttribute="height" constant="15" id="uRf-TA-qgS"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="enG-YC-Kpc" firstAttribute="centerY" secondItem="5nl-FN-Pwi" secondAttribute="centerY" id="iwM-2P-oEq"/>
+                            <constraint firstItem="enG-YC-Kpc" firstAttribute="centerX" secondItem="5nl-FN-Pwi" secondAttribute="centerX" id="ld4-DZ-71I"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="5nl-FN-Pwi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="21J-3l-QCH"/>
+                <constraint firstAttribute="trailing" secondItem="5nl-FN-Pwi" secondAttribute="trailing" id="OR1-US-rQ6"/>
+                <constraint firstItem="5nl-FN-Pwi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vap-pN-auT"/>
+                <constraint firstAttribute="bottom" secondItem="5nl-FN-Pwi" secondAttribute="bottom" id="xIQ-v3-V88"/>
+            </constraints>
+            <size key="customSize" width="119" height="30"/>
+            <connections>
+                <outlet property="imgArrow" destination="enG-YC-Kpc" id="lC5-NE-yee"/>
+            </connections>
+            <point key="canvasLocation" x="-57.24637681159421" y="52.901785714285715"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="downArrowBlue" width="11" height="5"/>
+    </resources>
+</document>

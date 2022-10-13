@@ -305,16 +305,30 @@
                                 <rect key="frame" x="0.0" y="364" width="414" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Watched" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLV-PQ-tfW">
-                                        <rect key="frame" x="15" y="10" width="110" height="20"/>
+                                        <rect key="frame" x="15" y="10" width="111" height="20"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                         <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wiW-ks-6Xc">
+                                        <rect key="frame" x="357" y="4.5" width="51" height="31"/>
+                                        <color key="onTintColor" name="appViolet"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUTOPLAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gT9-Sj-dvc">
+                                        <rect key="frame" x="272" y="11.5" width="77" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" name="newBlack1"/>
                                 <constraints>
                                     <constraint firstItem="mLV-PQ-tfW" firstAttribute="centerY" secondItem="AWj-SH-ORl" secondAttribute="centerY" id="5U8-3o-U3u"/>
+                                    <constraint firstItem="wiW-ks-6Xc" firstAttribute="centerY" secondItem="AWj-SH-ORl" secondAttribute="centerY" id="EYs-Qa-a5f"/>
+                                    <constraint firstAttribute="trailing" secondItem="wiW-ks-6Xc" secondAttribute="trailing" constant="8" id="GKH-iS-CVe"/>
                                     <constraint firstItem="mLV-PQ-tfW" firstAttribute="leading" secondItem="AWj-SH-ORl" secondAttribute="leading" constant="15" id="WDf-G1-FhZ"/>
+                                    <constraint firstItem="gT9-Sj-dvc" firstAttribute="centerY" secondItem="wiW-ks-6Xc" secondAttribute="centerY" id="ajY-fN-ecc"/>
+                                    <constraint firstItem="wiW-ks-6Xc" firstAttribute="leading" secondItem="gT9-Sj-dvc" secondAttribute="trailing" constant="8" id="f7K-2E-0kB"/>
                                     <constraint firstAttribute="height" constant="40" id="yrT-E3-ZoX"/>
                                 </constraints>
                             </view>
@@ -346,9 +360,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblAutoPlay" destination="gT9-Sj-dvc" id="B70-5a-u6G"/>
                         <outlet property="lblHeader" destination="mLV-PQ-tfW" id="P3U-rC-g7D"/>
                         <outlet property="lblTime" destination="94h-66-L6i" id="RsI-Fe-BdV"/>
                         <outlet property="lblTitle" destination="KEQ-r9-lC6" id="GYu-ay-XEO"/>
+                        <outlet property="switchAutoPlay" destination="wiW-ks-6Xc" id="WKb-Qr-I10"/>
                         <outlet property="tableViewVideos" destination="63d-mg-tuq" id="A0A-R1-r54"/>
                         <outlet property="videoView" destination="SNX-BU-n1k" id="z0H-P0-LaT"/>
                     </connections>
@@ -364,6 +380,9 @@
         <image name="time" width="10" height="10"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.37254901960784315" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appViolet">
+            <color red="0.59215686274509804" green="0.27843137254901962" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="gray1">
             <color red="0.48627450980392156" green="0.50980392156862742" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

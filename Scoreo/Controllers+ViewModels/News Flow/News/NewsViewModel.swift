@@ -18,18 +18,20 @@ class NewsViewModel{
     var videoList:[VideoList]?
     var newsPageData:Meta?
     var videoPageData:Meta?
-    
+    var originalNewsList:[NewsList]?
+    var originalVideoList:[VideoList]?
     func getNews(page:Int){
         //Utility.showProgress()
         NewsAPI().getNews(page: page) { response in
             self.newsPageData = response.meta
             if page == 1{
             self.newsList = response.list
+                self.originalNewsList = response.list
             }
             else{
-                var tempList:[NewsList] = self.newsList ?? []
+                var tempList:[NewsList] = self.originalNewsList ?? []
                 tempList.append(contentsOf: response.list ?? [])
-                self.newsList = tempList
+                self.originalNewsList = tempList
             }
             self.delegate?.didFinishFetchNews()
             
@@ -46,11 +48,12 @@ class NewsViewModel{
             self.videoPageData = response.meta
             if page == 1{
                 self.videoList = response.list
+                self.originalVideoList = response.list
             }
             else{
-                var tmpList:[VideoList] = self.videoList ?? []
+                var tmpList:[VideoList] = self.originalVideoList ?? []
                 tmpList.append(contentsOf: response.list ?? [])
-                self.videoList = tmpList
+                self.originalVideoList = tmpList
             }
             self.delegate?.didFinishFetchVideos()
         } failed: { msg in

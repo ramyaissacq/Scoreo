@@ -56,11 +56,6 @@
 "Feed Back" = "Feed Back";
 "Rate Us" = "Rate Us";
 "News" = "News";
-"Video" = "Video";
-"Trending" = "Trending";
-"Recommended for you" = "Recommended for you";
-"Match Highlights" = "Match Highlights";
-"Latest Videos" = "Latest Videos";
 "Team Standings" = "Team Standings";
 "Player Standings" = "Player Standings";
 "Ranking" = "Ranking";
@@ -197,3 +192,6 @@
 ////////////////////////////////////////////////////
 
 "Highlights" = "Highlights";
+"AUTOPLAY" = "AUTOPLAY";
+"Most Watched" = "Most Watched";
+"Search" = "Search";

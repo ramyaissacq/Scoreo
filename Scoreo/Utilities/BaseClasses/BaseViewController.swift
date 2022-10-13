@@ -8,7 +8,7 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        setTitleMargin()
-      // setNavBarColor()
+      setNavBarColor()
        // setTitle()
     }
     
@@ -30,7 +30,7 @@ class BaseViewController: UIViewController {
         navBarAppearance.configureWithOpaqueBackground()
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        navBarAppearance.backgroundColor = Colors.accentColor()
+        navBarAppearance.backgroundColor = UIColor.black
         navBarAppearance.shadowImage = UIImage()
         navBarAppearance.shadowColor = .clear
         self.navigationController?.navigationBar.tintColor = .black

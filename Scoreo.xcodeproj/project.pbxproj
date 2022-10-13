@@ -10,6 +10,7 @@
 		0CEFECC725BFF0E8936C347C /* Pods_Scoreo_ScoreoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8FC2810333C212165D9AFB /* Pods_Scoreo_ScoreoUITests.framework */; };
 		43926B849DE9A294E3DE67B6 /* Pods_ScoreoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B26FE0E42C73FA1D947105 /* Pods_ScoreoTests.framework */; };
 		66A3790CD43A842D961A2B81 /* Pods_Scoreo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB615188F3FE95D26030686 /* Pods_Scoreo.framework */; };
+		AD2E3E6828F7F0C900F41A60 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD2E3E6A28F7F0C900F41A60 /* Localizable.strings */; };
 		AD62DAE428F69AF100730317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62DAE328F69AF100730317 /* AppDelegate.swift */; };
 		AD62DAF028F69AF300730317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD62DAEE28F69AF300730317 /* LaunchScreen.storyboard */; };
 		AD62DAFB28F69AF300730317 /* ScoreoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62DAFA28F69AF300730317 /* ScoreoTests.swift */; };
@@ -242,7 +243,6 @@
 		AD62DD6528F6A09500730317 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62DC8228F6A09500730317 /* LocationManager.swift */; };
 		AD62DD6628F6A09500730317 /* FilePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62DC8328F6A09500730317 /* FilePicker.swift */; };
 		AD62DD6E28F6A1D500730317 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD6828F6A1D500730317 /* loading.json */; };
-		AD62DD6F28F6A1D500730317 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD6928F6A1D500730317 /* Localizable.strings */; };
 		AD62DD7028F6A1D500730317 /* prize.json in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD6A28F6A1D500730317 /* prize.json */; };
 		AD62DD7128F6A1D500730317 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD6B28F6A1D500730317 /* Colors.xcassets */; };
 		AD62DD7228F6A1D500730317 /* football.json in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD6C28F6A1D500730317 /* football.json */; };
@@ -275,6 +275,11 @@
 		7414C0FAD4140ED46A03A82D /* Pods-Scoreo-ScoreoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scoreo-ScoreoUITests.release.xcconfig"; path = "Target Support Files/Pods-Scoreo-ScoreoUITests/Pods-Scoreo-ScoreoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		85CE495B9B07175EB5F40969 /* Pods-ScoreoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreoTests.debug.xcconfig"; path = "Target Support Files/Pods-ScoreoTests/Pods-ScoreoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8B26FE0E42C73FA1D947105 /* Pods_ScoreoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScoreoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD2E3E6928F7F0C900F41A60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AD2E3E6B28F7F0CB00F41A60 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		AD2E3E6C28F7F0CE00F41A60 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AD2E3E6D28F7F0D000F41A60 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AD2E3E6E28F7F0D100F41A60 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AD62DAE028F69AF100730317 /* Scoreo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scoreo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD62DAE328F69AF100730317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD62DAEF28F69AF300730317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -531,7 +536,6 @@
 		AD62DC8228F6A09500730317 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		AD62DC8328F6A09500730317 /* FilePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilePicker.swift; sourceTree = "<group>"; };
 		AD62DD6828F6A1D500730317 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
-		AD62DD6928F6A1D500730317 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		AD62DD6A28F6A1D500730317 /* prize.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = prize.json; sourceTree = "<group>"; };
 		AD62DD6B28F6A1D500730317 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		AD62DD6C28F6A1D500730317 /* football.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = football.json; sourceTree = "<group>"; };
@@ -631,8 +635,8 @@
 				AD62DD7328F6A33400730317 /* Assets.xcassets */,
 				AD62DD6C28F6A1D500730317 /* football.json */,
 				AD62DD6828F6A1D500730317 /* loading.json */,
-				AD62DD6928F6A1D500730317 /* Localizable.strings */,
 				AD62DD6A28F6A1D500730317 /* prize.json */,
+				AD2E3E6A28F7F0C900F41A60 /* Localizable.strings */,
 				AD62DAEE28F69AF300730317 /* LaunchScreen.storyboard */,
 				AD62DAF128F69AF300730317 /* Info.plist */,
 			);
@@ -1894,6 +1898,7 @@
 				AD62DD7128F6A1D500730317 /* Colors.xcassets in Resources */,
 				AD62DC9928F6A09500730317 /* VideoTableViewCell.xib in Resources */,
 				AD62DC8F28F6A09500730317 /* Live.storyboard in Resources */,
+				AD2E3E6828F7F0C900F41A60 /* Localizable.strings in Resources */,
 				AD62DCB928F6A09500730317 /* EventTechnicTableViewCell.xib in Resources */,
 				AD62DC8A28F6A09500730317 /* Awards.storyboard in Resources */,
 				AD62DC8C28F6A09500730317 /* Main.storyboard in Resources */,
@@ -1917,7 +1922,6 @@
 				AD62DD7728F6A75C00730317 /* Roboto-Regular.ttf in Resources */,
 				AD62DAF028F69AF300730317 /* LaunchScreen.storyboard in Resources */,
 				AD62DCC628F6A09500730317 /* TitleCollectionViewCell.xib in Resources */,
-				AD62DD6F28F6A1D500730317 /* Localizable.strings in Resources */,
 				AD62DD7028F6A1D500730317 /* prize.json in Resources */,
 				AD62DC9C28F6A09500730317 /* HeighlightsTableViewCell.xib in Resources */,
 				AD62DCB328F6A09500730317 /* EventsAwayTableViewCell.xib in Resources */,
@@ -2278,6 +2282,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AD2E3E6A28F7F0C900F41A60 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD2E3E6928F7F0C900F41A60 /* en */,
+				AD2E3E6B28F7F0CB00F41A60 /* zh-Hans */,
+				AD2E3E6C28F7F0CE00F41A60 /* id */,
+				AD2E3E6D28F7F0D000F41A60 /* th */,
+				AD2E3E6E28F7F0D100F41A60 /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		AD62DAEE28F69AF300730317 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2537,6 +2553,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2568,6 +2585,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

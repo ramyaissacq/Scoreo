@@ -22,28 +22,56 @@ class NewsViewController: BaseViewController {
     @IBOutlet weak var emptyView: UIView!
     //MARK: - Variables
     var collectionViewNewsObserver: NSKeyValueObservation?
-    var headers = ["News".localized,"Video".localized]
+    var headers = ["News".localized,"Highlights".localized]
     var selectedHeaderIndex = 0
     var viewModel = NewsViewModel()
     var newsPage = 1
     var videoPage = 1
     var refreshControl:UIRefreshControl?
-    
-    
+    let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 250, height: 40))
+    var isSerchMode = false
     override func viewDidLoad() {
         super.viewDidLoad()
         intialSettings()
     }
 
     func setupNavBar(){
-        let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        btn.setImage(UIImage(named: "menu"), for: .normal)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
+        isSerchMode = false
+        let lbl = getHeaderLabel(title: "News".localized)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: lbl)
+        let searchBtn = getButton(image: UIImage(named: "searchWhite")!)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: searchBtn)
+        searchBtn.addTarget(self, action: #selector(actionSearch), for: .touchUpInside)
+        self.navigationItem.titleView = nil
+        
+        
+    }
+    
+    @objc func actionSearch(){
+       resetNavBar()
+    }
+    
+    func resetNavBar(){
+        isSerchMode = true
+        let backBtn = getButton(image: UIImage(named: "back")!)
+        backBtn.addTarget(self, action: #selector(backBtnClick), for: .touchUpInside)
+        searchBar.searchTextField.textColor = .white
+        searchBar.placeholder = "Search".localized
+        searchBar.delegate = self
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backBtn)
+        self.navigationItem.titleView = searchBar
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: UIView())
+        
+        
+    }
+    
+    @objc func backBtnClick(){
+        setupNavBar()
         
     }
     
     func intialSettings(){
-        setupTopBar()
+        setupNavBar()
         collectionViewHeader.registerCell(identifier: "SelectionCollectionViewCell")
         tableViewNews.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         tableViewNews.register(UINib(nibName: "HeighlightsTableViewCell", bundle: nil), forCellReuseIdentifier: "cell1")
@@ -61,17 +89,15 @@ class NewsViewController: BaseViewController {
         
     }
     
-    func setupTopBar(){
-        let lbl = getHeaderLabel(title: "News".localized)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: lbl)
-        let btn = getButton(image: UIImage(named: "searchWhite")!)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: btn)
-        
-    }
+    
     
     func setupViews(){
         
         tableViewNews.reloadData()
+        if isSerchMode{
+            searchBar.text = ""
+            actionCancelSearch()
+        }
     }
     
     @objc func refreshViews(){
@@ -88,7 +114,7 @@ extension NewsViewController:NewsViewModelDelegates{
     
 func didFinishFetchNews() {
     newsPage += 1
-    tableViewNews.reloadData()
+    filterLists()
     if viewModel.newsList?.count ?? 0 > 0{
         emptyView.isHidden = true
     }
@@ -100,7 +126,7 @@ func didFinishFetchNews() {
 
 func didFinishFetchVideos() {
     videoPage += 1
-    tableViewNews.reloadData()
+    filterLists()
     if viewModel.videoList?.count ?? 0 > 0{
         emptyView.isHidden = true
     }
@@ -109,5 +135,30 @@ func didFinishFetchVideos() {
     }
     
 }
+    
+    func filterLists(){
+        if isSerchMode{
+            if selectedHeaderIndex == 0{
+                self.viewModel.newsList?.removeAll()
+                self.viewModel.newsList = self.viewModel.originalNewsList?.filter{$0.title?.lowercased().contains(searchBar.text?.lowercased() ?? "") ?? false}
+                
+            }
+            else{
+                self.viewModel.videoList?.removeAll()
+                self.viewModel.videoList = self.viewModel.originalVideoList?.filter{$0.title?.contains(searchBar.text ?? "") ?? false}
+            }
+            
+        }
+        else{
+            if selectedHeaderIndex == 0{
+            self.viewModel.newsList = self.viewModel.originalNewsList
+            }
+            else{
+                self.viewModel.videoList = self.viewModel.originalVideoList
+            }
+        }
+        tableViewNews.reloadData()
+        
+    }
 }
 

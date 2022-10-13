@@ -101,3 +101,40 @@ extension NewsViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
 }
+
+
+//MARK: - UISearchbar Delegates
+
+extension NewsViewController:UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == ""{
+            actionCancelSearch()
+        }
+        else{
+            filterLists()
+        }
+        
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        actionCancelSearch()
+        
+    }
+    
+    func actionCancelSearch(){
+        if selectedHeaderIndex == 0{
+            self.viewModel.newsList?.removeAll()
+            self.viewModel.newsList = self.viewModel.originalNewsList
+        }
+        else{
+            self.viewModel.videoList?.removeAll()
+            self.viewModel.videoList = self.viewModel.originalVideoList
+        }
+        tableViewNews.reloadData()
+    }
+}

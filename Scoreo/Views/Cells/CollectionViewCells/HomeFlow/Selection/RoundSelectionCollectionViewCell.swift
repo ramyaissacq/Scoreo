@@ -41,10 +41,12 @@ class RoundSelectionCollectionViewCell: UICollectionViewCell {
         if isSelected{
             backView.backgroundColor = selectedViewColor
             lblTite.textColor = selectedTitleColor
+            backView.borderWidth = 0
         }
         else{
             backView.backgroundColor = unselectedViewColor
             lblTite.textColor = unselectedTitleColor
+            backView.borderWidth = 1
         }
     }
 

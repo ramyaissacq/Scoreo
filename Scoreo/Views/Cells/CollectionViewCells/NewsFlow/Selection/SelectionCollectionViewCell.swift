@@ -13,6 +13,9 @@ class SelectionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var stack: UIStackView!
     
+    @IBOutlet weak var underLineTrailing: NSLayoutConstraint!
+    @IBOutlet weak var underLineLeading: NSLayoutConstraint!
+    
     var callSelection:(()->Void)?
     var selectionColor = Colors.appVioletColor()
     var deSelectionColor = Colors.newGrayColor1()

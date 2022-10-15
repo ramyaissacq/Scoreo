@@ -10,6 +10,8 @@ import UIKit
 
 class ScoresTableViewCell: UITableViewCell {
     //MARK: - IBOutlets
+    
+    @IBOutlet weak var oddsBackView: UIView!
     @IBOutlet weak var viewIndex: UIView!
     
     @IBOutlet weak var viewAnalysis: UIView!
@@ -26,12 +28,16 @@ class ScoresTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lblAwayName: UILabel!
     
-    @IBOutlet weak var lblScore: UILabel!
+    @IBOutlet weak var lblHomeScore: UILabel!
+    @IBOutlet weak var lblAwayScore: UILabel!
     
-    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblHomeYellow: UILabel!
+    @IBOutlet weak var lblAwayYellow: UILabel!
+    @IBOutlet weak var lblHomeRed: UILabel!
+    @IBOutlet weak var lblAwayRed: UILabel!
     
     @IBOutlet weak var lblTime: UILabel!
-    @IBOutlet weak var lblHalfScore: UILabel!
+    
     @IBOutlet weak var lblCorner: UILabel!
     @IBOutlet weak var lblHandicap1: UILabel!
     @IBOutlet weak var lblHandicap2: UILabel!
@@ -39,12 +45,10 @@ class ScoresTableViewCell: UITableViewCell {
     @IBOutlet weak var lblOverUnder1: UILabel!
     @IBOutlet weak var lblOverUnder2: UILabel!
     @IBOutlet weak var lblOverUnder3: UILabel!
-    @IBOutlet weak var indexViewYellow: UIView!
+   
     @IBOutlet weak var odds2Stack: UIStackView!
     @IBOutlet weak var odds1Stack: UIStackView!
     
-    @IBOutlet weak var cornerStack: UIStackView!
-    @IBOutlet weak var cornerView: UIView!
     
     @IBOutlet weak var quartersStack: UIStackView!
     @IBOutlet weak var tableViewQuarters: UITableView!
@@ -60,6 +64,10 @@ class ScoresTableViewCell: UITableViewCell {
     @IBOutlet weak var fixedLeague: UILabel!
     @IBOutlet weak var fixedBriefing: UILabel!
     
+    @IBOutlet weak var homeCardStack: UIStackView!
+    
+    
+    @IBOutlet weak var awayCardStack: UIStackView!
     
     //MARK: - Variables
     var callIndexSelection:(()->Void)?
@@ -68,7 +76,7 @@ class ScoresTableViewCell: UITableViewCell {
     var callBriefingSelection:(()->Void)?
     var callLeagueSelection:(()->Void)?
     var callLongPress:(()->Void)?
-    var quarters = ["","1Q","2Q","3Q","4Q","F"]
+    var quarters = ["","Q1","Q2","Q3","Q4","F"]
     var homeScores = [String]()
     var awayScores = [String]()
     
@@ -144,49 +152,43 @@ class ScoresTableViewCell: UITableViewCell {
     
     func configureCell(obj:MatchList?,timeIndex:Int){
         quartersStack.isHidden = true
-        cornerStack.isHidden = false
-        cornerView.isHidden = false
         viewEvent.isHidden = false
+        homeCardStack.isHidden = false
+        awayCardStack.isHidden = false
+        lblCorner.isHidden = false
         lblName.text = obj?.leagueName
         lblHomeName.text = obj?.homeName
         lblAwayName.text = obj?.awayName
-        lblScore.text = "\(obj?.homeScore ?? 0 ) : \(obj?.awayScore ?? 0)"
-        //let timeDifference = Date() - Utility.getSystemTimeZoneTime(dateString: obj?.startTime ?? "")
+        lblHomeScore.text = "\(obj?.homeScore ?? 0 )"
+        lblAwayScore.text = "\(obj?.awayScore ?? 0)"
+        lblHomeYellow.text = "\(obj?.homeYellow ?? 0)"
+        lblAwayYellow.text = "\(obj?.awayYellow ?? 0)"
+        lblHomeRed.text = "\(obj?.homeRed ?? 0)"
+        lblAwayRed.text = "\(obj?.awayRed ?? 0)"
         let mins = ScoresTableViewCell.timeInMins(startDate: obj?.startTime ?? "")
-        let date = Utility.getSystemTimeZoneTime(dateString: obj?.matchTime ?? "")
-        //ScoresTableViewCell.getMinutesFromTimeInterval(interval: timeDifference)
-        if mins > 0{
-        lblDate.text = "\(ScoresTableViewCell.getStatus(state: obj?.state ?? 0)) \(mins)'"
+        
+        lblTime.text = "\(ScoresTableViewCell.getStatus(state: obj?.state ?? 0)) \(mins)'"
+        if obj?.state == 0{
+            let matchDate = Utility.getSystemTimeZoneTime(dateString: obj?.matchTime ?? "")
+            lblTime.text = Utility.formatDate(date: matchDate, with: .hhmm2)
         }
-        else{
-            lblDate.text = Utility.formatDate(date: date, with: .eddmmm)
-        }
-        if obj?.state == 0 {
-            lblScore.text = "SOON".localized
-            lblDate.text = Utility.formatDate(date: date, with: .eddmmm)
-        }
-        let matchDate = Utility.getSystemTimeZoneTime(dateString: obj?.matchTime ?? "")
-        lblTime.text = Utility.formatDate(date: matchDate, with: .hhmm2)
+
+        
+        var halfScore = ""
+        var corner = ""
         if obj?.homeHalfScore == "0" && obj?.awayHalfScore == "0"{
-            lblHalfScore.text = ""
+            halfScore = ""
         }
         else{
-        lblHalfScore.text = "\(obj?.homeHalfScore ?? "") : \(obj?.awayHalfScore ?? "")"
+            halfScore = "HT = \(obj?.homeHalfScore ?? "") : \(obj?.awayHalfScore ?? "")"
         }
         if obj?.homeCorner == "0" && obj?.awayCorner == "0"{
-            lblCorner.text = ""
+            corner = ""
         }
         else{
-        lblCorner.text = "\(obj?.homeCorner ?? "") : \(obj?.awayCorner ?? "")"
+        corner = "C = \(obj?.homeCorner ?? "") : \(obj?.awayCorner ?? "")"
         }
-        if obj?.homeHalfScore == "" && obj?.awayHalfScore == "" && obj?.homeCorner == "" && obj?.awayCorner == ""{
-            cornerView.isHidden = true
-            cornerStack.isHidden = true
-        }
-        else{
-            cornerView.isHidden = false
-            cornerStack.isHidden = false
-        }
+        lblCorner.text = "\(corner) \(halfScore)"
         
         if obj?.odds?.handicap?.count ?? 0 > 7{
         lblHandicap1.text = String(obj?.odds?.handicap?[6] ?? 0)
@@ -208,11 +210,12 @@ class ScoresTableViewCell: UITableViewCell {
         }
         
         if (obj?.odds?.overUnder?.isEmpty ?? true) && (obj?.odds?.handicap?.isEmpty ?? true){
-            indexViewYellow.isHidden = true
+            oddsBackView.isHidden = true
         }
         else{
-            indexViewYellow.isHidden = false
+            oddsBackView.isHidden = false
         }
+      
         
         if timeIndex == 0{
             makeAllBottomViewsShow()
@@ -251,13 +254,14 @@ class ScoresTableViewCell: UITableViewCell {
     
     
     func configureCell(obj:BasketballMatchList?,timeIndex:Int){
-        cornerStack.isHidden = true
-        cornerView.isHidden = true
+        
         viewEvent.isHidden = true
         viewIndex.isHidden = false
         odds1Stack.isHidden = false
         odds2Stack.isHidden = false
-        indexViewYellow.isHidden = false
+        homeCardStack.isHidden = true
+        awayCardStack.isHidden = true
+        lblCorner.isHidden = true
         switch Utility.getCurrentLang(){
         case "en":
             lblName.text = obj?.leagueNameEn
@@ -284,17 +288,24 @@ class ScoresTableViewCell: UITableViewCell {
         
         
         }
-        if obj?.matchState == 0{
-            lblScore.text = "SOON".localized
-        }
-        else{
-        lblScore.text = "\(obj?.homeScore ?? "" ) : \(obj?.awayScore ?? "")"
-        }
-        let date = Utility.getSystemTimeZoneTime(dateString: obj?.matchTime ?? "")
-        lblDate.text = Utility.formatDate(date: date, with: .eddmmm)
         
-        let matchDate = Utility.getSystemTimeZoneTime(dateString: obj?.matchTime ?? "")
-        lblTime.text = Utility.formatDate(date: matchDate, with: .hhmm2)
+        let mins = ScoresTableViewCell.timeInMins(startDate: obj?.matchTime ?? "")
+        lblTime.text = "\(ScoresTableViewCell.getBasketballStatus(state: obj?.matchState ?? 0)) \(mins)'"
+        if obj?.matchState == 0{
+            let matchDate = Utility.getSystemTimeZoneTime(dateString: obj?.matchTime ?? "")
+            lblTime.text = Utility.formatDate(date: matchDate, with: .hhmm2)
+        }
+//        if obj?.matchState == 0{
+//           // lblScore.text = "SOON".localized
+//        }
+//        else{
+//        //lblScore.text = "\(obj?.homeScore ?? "" ) : \(obj?.awayScore ?? "")"
+//        }
+//        let date = Utility.getSystemTimeZoneTime(dateString: obj?.matchTime ?? "")
+//
+//
+//        let matchDate = Utility.getSystemTimeZoneTime(dateString: obj?.matchTime ?? "")
+//        lblTime.text = Utility.formatDate(date: matchDate, with: .hhmm2)
        
         lblHandicap1.text = String(obj?.odds?.moneyLineAverage?.liveHomeWinRate ?? 0)
         if obj?.odds?.spread?.count ?? 0 > 9{
@@ -324,6 +335,18 @@ class ScoresTableViewCell: UITableViewCell {
         else{
             lblOverUnder3.text = ""
         }
+        if (obj?.odds?.spread?.isEmpty ?? true) && (obj?.odds?.total?.isEmpty ?? true){
+            odds1Stack.isHidden = true
+            odds2Stack.isHidden = true
+            oddsBackView.isHidden = true
+        }
+        else{
+            odds1Stack.isHidden = false
+            odds2Stack.isHidden = false
+            oddsBackView.isHidden = false
+
+        }
+        
         if timeIndex == 0{
             makeAllBottomViewsShow()
             
@@ -345,12 +368,12 @@ class ScoresTableViewCell: UITableViewCell {
         if (obj?.odds?.spread?.isEmpty ?? true) && (obj?.odds?.total?.isEmpty ?? true){
             odds1Stack.isHidden = true
             odds2Stack.isHidden = true
-            indexViewYellow.isHidden = true
+            
         }
         else{
             odds1Stack.isHidden = false
             odds2Stack.isHidden = false
-            indexViewYellow.isHidden = false
+            
 
         }
         homeScores = ["Home".localized,obj?.home1 ?? "",obj?.home2 ?? "",obj?.home3 ?? "",obj?.home4 ?? "",obj?.homeScore ?? ""]

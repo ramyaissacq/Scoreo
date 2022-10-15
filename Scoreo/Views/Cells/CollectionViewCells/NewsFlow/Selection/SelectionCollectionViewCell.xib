@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -26,18 +27,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="69" height="59"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgl-AH-5dI">
-                                <rect key="frame" x="20" y="54" width="29" height="4"/>
+                                <rect key="frame" x="20" y="53" width="29" height="5"/>
                                 <color key="backgroundColor" name="newGray2"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="4" id="B3D-Fz-CQb"/>
+                                    <constraint firstAttribute="height" constant="5" id="B3D-Fz-CQb"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3bm-6x-wHK">
                                 <rect key="frame" x="34.5" y="29.5" width="0.0" height="0.0"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKJ-lM-chE">
-                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                        <color key="textColor" name="newGray2"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -68,6 +69,8 @@
             <connections>
                 <outlet property="lblTitle" destination="BKJ-lM-chE" id="Vjs-ey-pfX"/>
                 <outlet property="stack" destination="3bm-6x-wHK" id="dbY-33-Vr6"/>
+                <outlet property="underLineLeading" destination="WQa-oB-Wud" id="TGi-Gj-tQM"/>
+                <outlet property="underLineTrailing" destination="wDG-hf-qTv" id="YZI-wi-FmM"/>
                 <outlet property="underLineView" destination="dgl-AH-5dI" id="8Nk-oF-99R"/>
             </connections>
             <point key="canvasLocation" x="145.6521739130435" y="102.79017857142857"/>

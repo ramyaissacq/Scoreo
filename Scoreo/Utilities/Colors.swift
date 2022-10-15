@@ -49,5 +49,9 @@ class Colors: NSObject {
     {
         return UIColor(named: "newGray2")!
     }
+    class func violet1Color()->UIColor
+    {
+        return UIColor(named: "violet1")!
+    }
     
 }

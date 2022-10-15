@@ -45,6 +45,42 @@ extension ScoresTableViewCell{
     }
     
    
+    class func getBasketballStatus(state:Int)->String{
+        var value = ""
+        switch state{
+        case 0:
+            value = "SOON".localized
+        case 1:
+            value = "Q1"
+        case 2:
+            value = "Q2"
+        case 3:
+            value = "Q3"
+        case 4:
+            value = "Q4"
+        case 5:
+            value = "1OT"
+        case 6:
+            value = "2OT"
+        case 7:
+            value = "3OT"
+        case 50:
+            value = "HT"
+        case -1:
+            value = "FT"
+        case -2:
+            value = "TBD"
+        case -3:
+            value = "INT"
+        case -4:
+            value = "CANCEL".localized
+        case -5:
+            value = "DELAY".localized
+        default:
+            break
+        }
+        return value
+        }
     
     class func getMinutesFromTimeInterval(interval: TimeInterval)->Int{
           let time = NSInteger(interval)
@@ -68,8 +104,8 @@ extension ScoresTableViewCell:UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! GeneralRowTableViewCell
         
         if indexPath.row == 0{
-            cell.titleType = .Header(color: .black)
-            cell.backgroundColor = UIColor(named: "gray9")
+            cell.titleType = .Header(color: Colors.violet1Color())
+            cell.backgroundColor = .clear
         }
         else{
             cell.titleType = .Normal
@@ -79,11 +115,10 @@ extension ScoresTableViewCell:UITableViewDelegate,UITableViewDataSource{
         cell.height = 30
         cell.spacing = 0
         cell.collectionHeight.constant = 30
-        cell.needBorder = true
         if indexPath.row == 0{
         cell.values = quarters
         }
-        else if indexPath.row == 2{
+        else if indexPath.row == 1{
             cell.values = homeScores
         }
         else{

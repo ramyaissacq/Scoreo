@@ -20,22 +20,15 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var collectionViewCategory: UICollectionView!
     @IBOutlet weak var noDataView: UIView!
     @IBOutlet weak var leagueView: UIView!
-    @IBOutlet weak var timeView: UIView!
     @IBOutlet weak var lblLeague: UILabel!
-    @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var highlightsStack: UIStackView!
-    @IBOutlet weak var lblHeader: UILabel!
     @IBOutlet weak var collectionViewHighlights: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionViewHighlightsHeight: NSLayoutConstraint!
-    @IBOutlet weak var soccerView: UIView!
-    @IBOutlet weak var lblSoccer: UILabel!
-    @IBOutlet weak var imgSoccer: UIImageView!
-    @IBOutlet weak var basketView: UIView!
-    @IBOutlet weak var lblBasketBall: UILabel!
-    @IBOutlet weak var imgBasketBall: UIImageView!
     @IBOutlet weak var animationView: AnimationView!
     
+    
+    @IBOutlet weak var collectionViewTime: UICollectionView!
     
     //MARK: - Variables
     var viewModel = HomeVieModel()
@@ -44,7 +37,7 @@ class HomeViewController: BaseViewController {
     var categorySizes = [CGFloat]()
     var selectedType = 0
     var leagueDropDown:DropDown?
-    var timeDropDown:DropDown?
+    var sportDropDown:DropDown?
     var selectedLeagueID:Int?
     var selectedTimeIndex = 0
     var selectedDate = ""
@@ -56,48 +49,15 @@ class HomeViewController: BaseViewController {
     var timerHighlightsRefresh = Timer()
     var isHighlights = false
     static var urlDetails:UrlDetails?
+    var timeArray = ["Today".localized,"Result".localized,"Schedule".localized]
+    var sportsView:SportsView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSettings()
     }
     
-    
-    
-    //IBActions
-    @IBAction func actionTapSoccer(){
-        selectedSportsType = SportsType.soccer
-        handleSportsSelection()
-        resetSportType()
-        if AppPreferences.getMatchHighlights().count > 0{
-            collectionViewHighlightsHeight.constant = 180
-            collectionViewHighlights.reloadData()
-            highlightsStack.isHidden = false
-            pageControl.numberOfPages = AppPreferences.getMatchHighlights().count
-        }
-        else{
-            highlightsStack.isHidden = true
-        }
-        
-        
-    }
-    
-    @IBAction func actionTapBasketball(){
-        selectedSportsType = SportsType.basketball
-        handleSportsSelection()
-        resetSportType()
-        if AppPreferences.getBasketBallHighlights().count > 0{
-            collectionViewHighlightsHeight.constant = 263
-            collectionViewHighlights.reloadData()
-            highlightsStack.isHidden = false
-            pageControl.numberOfPages = AppPreferences.getBasketBallHighlights().count
-        }
-        else{
-            highlightsStack.isHidden = true
-        }
-        
-    }
-    
+   
     
     func initialSettings(){
         
@@ -111,9 +71,10 @@ class HomeViewController: BaseViewController {
         setupGestures()
         configureLottieAnimation()
         // FootballLeague.populateFootballLeagues()
-        configureTimeDropDown()
         configureLeagueDropDown()
+        configureSportsDropDown()
         viewModel.categories = viewModel.todayCategories
+        collectionViewTime.registerCell(identifier: "SelectionCollectionViewCell")
         collectionViewCategory.registerCell(identifier: "RoundSelectionCollectionViewCell")
         collectionViewHighlights.registerCell(identifier: "HighlightsCollectionViewCell")
         collectionViewCategory.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
@@ -131,7 +92,7 @@ class HomeViewController: BaseViewController {
             pageControl.numberOfPages = AppPreferences.getMatchHighlights().count
             highlightsStack.isHidden = false
         }
-        
+        collectionViewTime.selectItem(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .left)
         viewModel.delegate = self
         viewModel.getMatchesList(page: page)
         viewModel.getBasketballScores()
@@ -146,34 +107,55 @@ class HomeViewController: BaseViewController {
     }
     
     
-    func handleSportsSelection(){
-        if selectedSportsType == .soccer{
-            soccerView.backgroundColor = Colors.accentColor()
-            imgSoccer.setImageColor(color: .white)
-            lblSoccer.textColor = .white
-        }
-        else if selectedSportsType == .basketball{
-            basketView.backgroundColor = Colors.accentColor()
-            imgBasketBall.setImageColor(color: .white)
-            lblBasketBall.textColor = .white
+   
+    
+   
+    
+    func configureSportsDropDown(){
+        
+        sportDropDown = DropDown()
+        sportDropDown?.anchorView = sportsView?.lblSports
+        sportDropDown?.dataSource = ["Football".localized,"Basketball".localized]
+        sportsView?.lblSports.text = "Football".localized
+        sportDropDown?.selectionAction = { [unowned self] (index: Int, item: String) in
+            sportsView?.lblSports.text = item
+            if index == 0{
+                selectedSportsType = .soccer
+            }
+            else{
+                selectedSportsType = .basketball
+            }
+            configureSportSelection()
         }
         
-        deSelectSportViews()
+        
     }
     
-    func deSelectSportViews(){
-        if selectedSportsType != .soccer{
-            soccerView.backgroundColor = Colors.fadeRedColor()
-            imgSoccer.setImageColor(color: Colors.accentColor())
-            lblSoccer.textColor = Colors.accentColor()
+    func configureSportSelection(){
+        resetSportType()
+        if selectedSportsType == .soccer{
+        if AppPreferences.getMatchHighlights().count > 0{
+            collectionViewHighlightsHeight.constant = 180
+            collectionViewHighlights.reloadData()
+            highlightsStack.isHidden = false
+            pageControl.numberOfPages = AppPreferences.getMatchHighlights().count
         }
-        
-        if selectedSportsType != .basketball{
-            basketView.backgroundColor = Colors.fadeRedColor()
-            imgBasketBall.setImageColor(color: Colors.accentColor())
-            lblBasketBall.textColor = Colors.accentColor()
+        else{
+            highlightsStack.isHidden = true
         }
-        
+        }
+        else{
+            if AppPreferences.getBasketBallHighlights().count > 0{
+                collectionViewHighlightsHeight.constant = 263
+                collectionViewHighlights.reloadData()
+                highlightsStack.isHidden = false
+                pageControl.numberOfPages = AppPreferences.getBasketBallHighlights().count
+            }
+            else{
+                highlightsStack.isHidden = true
+            }
+            
+        }
         
     }
     
@@ -207,8 +189,7 @@ class HomeViewController: BaseViewController {
         viewModel.categories = viewModel.todayCategories
         collectionViewCategory.reloadData()
         selectedTimeIndex = 0
-        lblTime.text = "Today".localized
-        lblHeader.text = "Today".localized
+        collectionViewTime.selectItem(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .left)
         if selectedSportsType == .soccer{
             var arr:[String] = viewModel.scoreResponse?.todayHotLeague?.map{$0.leagueName ?? ""} ?? []
             arr.insert("All Leagues".localized, at: 0)
@@ -226,15 +207,8 @@ class HomeViewController: BaseViewController {
     }
     
     
-    func configureTimeDropDown(){
-        timeDropDown = DropDown()
-        timeDropDown?.anchorView = lblTime
-        timeDropDown?.dataSource = ["Today".localized,"Result".localized,"Schedule".localized]
-        lblTime.text = "Today".localized
-        lblHeader.text = "Today".localized
-        timeDropDown?.selectionAction = { [unowned self] (index: Int, item: String) in
-            lblTime.text = item
-            lblHeader.text = item
+    func handleTimeSelection(index:Int){
+        
             selectedTimeIndex = index
             switch index{
             case 0:
@@ -268,7 +242,7 @@ class HomeViewController: BaseViewController {
             collectionViewCategory.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
             collectionViewCategory.delegate?.collectionView?(collectionViewCategory, didSelectItemAt: IndexPath(row: 0, section: 0))
             
-        }
+        
         
     }
     
@@ -276,8 +250,8 @@ class HomeViewController: BaseViewController {
         let tapLg = UITapGestureRecognizer(target: self, action: #selector(tapLeague))
         leagueView.addGestureRecognizer(tapLg)
         
-        let tapTm = UITapGestureRecognizer(target: self, action: #selector(tapTime))
-        timeView.addGestureRecognizer(tapTm)
+        let tapSp = UITapGestureRecognizer(target: self, action: #selector(tapSports))
+        sportsView!.addGestureRecognizer(tapSp)
         
         let left = UISwipeGestureRecognizer(target: self, action: #selector(swipe(sender:)))
         left.direction = .left
@@ -297,9 +271,11 @@ class HomeViewController: BaseViewController {
         
     }
     
-    @objc func tapTime(){
-        timeDropDown?.show()
+    @objc func tapSports(){
+        sportDropDown?.show()
     }
+    
+   
     
     @objc func swipe(sender:UISwipeGestureRecognizer){
         if sender.direction == .left{
@@ -335,13 +311,14 @@ class HomeViewController: BaseViewController {
     }
     
     func setupNavButtons(){
+        sportsView = SportsView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: sportsView!)
         let leftBtn = getButton(image: UIImage(named: "menu")!)
         leftBtn.addTarget(self, action: #selector(menuTapped), for: .touchUpInside)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBtn)
         
         let rightBtn = getButton(image: UIImage(named: "search")!)
         rightBtn.addTarget(self, action: #selector(searchTapped), for: .touchUpInside)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightBtn)
+        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: rightBtn),UIBarButtonItem(customView: leftBtn)]
     }
     
     @objc func menuTapped(){

@@ -33,7 +33,7 @@ class TitleCollectionViewCell: UICollectionViewCell {
     func setupTitle(){
         switch titleType{
         case .Normal:
-            lblTitle.textColor = .black
+            lblTitle.textColor = .white
             lblTitle.font = UIFont(name: "Roboto-Regular", size: 10)
         case .RedHeader:
             lblTitle.textColor = Colors.accentColor()

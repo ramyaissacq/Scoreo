@@ -249,6 +249,8 @@
 		AD62DD7428F6A33400730317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD7328F6A33400730317 /* Assets.xcassets */; };
 		AD62DD7728F6A75C00730317 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD7628F6A75C00730317 /* Roboto-Regular.ttf */; };
 		AD62DD7928F6A7D900730317 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD7828F6A7D900730317 /* Roboto-Medium.ttf */; };
+		ADDFA4A928FAA36E00CCF764 /* SportsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADDFA4A828FAA36E00CCF764 /* SportsView.xib */; };
+		ADDFA4AB28FAA39100CCF764 /* SportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDFA4AA28FAA39100CCF764 /* SportsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -543,6 +545,8 @@
 		AD62DD7628F6A75C00730317 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		AD62DD7828F6A7D900730317 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		AD8FC2810333C212165D9AFB /* Pods_Scoreo_ScoreoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scoreo_ScoreoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADDFA4A828FAA36E00CCF764 /* SportsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SportsView.xib; sourceTree = "<group>"; };
+		ADDFA4AA28FAA39100CCF764 /* SportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsView.swift; sourceTree = "<group>"; };
 		C8730CD3E0843A6D5FED6391 /* Pods-Scoreo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scoreo.release.xcconfig"; path = "Target Support Files/Pods-Scoreo/Pods-Scoreo.release.xcconfig"; sourceTree = "<group>"; };
 		CF0B68A284E563079235E479 /* Pods-Scoreo-ScoreoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scoreo-ScoreoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Scoreo-ScoreoUITests/Pods-Scoreo-ScoreoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1146,8 +1150,8 @@
 		AD62DBB128F6A09400730317 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				AD62DBB228F6A09400730317 /* ScoresView.swift */,
-				AD62DBB328F6A09400730317 /* ScoresView.xib */,
+				ADDFA4A728FAA35200CCF764 /* SportsView */,
+				ADDFA4A628FAA33B00CCF764 /* ScoreView */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1769,6 +1773,24 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		ADDFA4A628FAA33B00CCF764 /* ScoreView */ = {
+			isa = PBXGroup;
+			children = (
+				AD62DBB228F6A09400730317 /* ScoresView.swift */,
+				AD62DBB328F6A09400730317 /* ScoresView.xib */,
+			);
+			path = ScoreView;
+			sourceTree = "<group>";
+		};
+		ADDFA4A728FAA35200CCF764 /* SportsView */ = {
+			isa = PBXGroup;
+			children = (
+				ADDFA4A828FAA36E00CCF764 /* SportsView.xib */,
+				ADDFA4AA28FAA39100CCF764 /* SportsView.swift */,
+			);
+			path = SportsView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1920,6 +1942,7 @@
 				AD62DCD428F6A09500730317 /* RoundSelectionCollectionViewCell.xib in Resources */,
 				AD62DCD128F6A09500730317 /* HighlightsCollectionViewCell.xib in Resources */,
 				AD62DD7728F6A75C00730317 /* Roboto-Regular.ttf in Resources */,
+				ADDFA4A928FAA36E00CCF764 /* SportsView.xib in Resources */,
 				AD62DAF028F69AF300730317 /* LaunchScreen.storyboard in Resources */,
 				AD62DCC628F6A09500730317 /* TitleCollectionViewCell.xib in Resources */,
 				AD62DD7028F6A1D500730317 /* prize.json in Resources */,
@@ -2080,6 +2103,7 @@
 				AD62DD6228F6A09500730317 /* Utility.swift in Sources */,
 				AD62DD3428F6A09500730317 /* LeagueViewController.swift in Sources */,
 				AD62DD2928F6A09500730317 /* LiveViewController.swift in Sources */,
+				ADDFA4AB28FAA39100CCF764 /* SportsView.swift in Sources */,
 				AD62DC9628F6A09500730317 /* SideMenuTableViewCell.swift in Sources */,
 				AD62DD4728F6A09500730317 /* BaseUrl.swift in Sources */,
 				AD62DCED28F6A09500730317 /* BasketOdds.swift in Sources */,

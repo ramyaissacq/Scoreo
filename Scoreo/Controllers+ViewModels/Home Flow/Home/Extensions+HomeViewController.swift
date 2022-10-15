@@ -82,7 +82,10 @@ extension HomeViewController:HomeViewModelDelegate{
 
 extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == collectionViewCategory{
+        if collectionView == collectionViewTime{
+            return timeArray.count
+        }
+       else if collectionView == collectionViewCategory{
             return viewModel.categories.count
         }
         else{
@@ -97,9 +100,16 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == collectionViewCategory{
+        if collectionView == collectionViewTime{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectionCollectionViewCell", for: indexPath) as! SelectionCollectionViewCell
+            cell.underLineLeading.constant = 0
+            cell.underLineTrailing.constant = 0
+            cell.lblTitle.text = timeArray[indexPath.row]
+            return cell
+        }
+        else if collectionView == collectionViewCategory{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RoundSelectionCollectionViewCell", for: indexPath) as! RoundSelectionCollectionViewCell
-            cell.configureCell(unselectedViewColor: Colors.fadeRedColor(), selectedViewColor: Colors.accentColor(), unselectedTitleColor: Colors.accentColor(), selectedTitleColor: .white, title: viewModel.categories[indexPath.row])
+            cell.configureCell(unselectedViewColor: .clear, selectedViewColor: Colors.appVioletColor(), unselectedTitleColor: Colors.newGrayColor2(), selectedTitleColor: .white, title: viewModel.categories[indexPath.row])
             return cell
         }
         else{
@@ -178,7 +188,11 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView == collectionViewCategory{
+        if collectionView == collectionViewTime{
+            handleTimeSelection(index: indexPath.row)
+            
+        }
+        else if collectionView == collectionViewCategory{
             collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
             if selectedTimeIndex == 0{
                 selectedType = indexPath.row
@@ -205,11 +219,21 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == collectionViewCategory{
+        if collectionView == collectionViewTime{
+            let width:CGFloat = CGFloat((UIScreen.main.bounds.width - 50)/3)
+            return CGSize(width: width, height: 40)
+        }
+        else if collectionView == collectionViewCategory{
             if categorySizes.count == 0{
                 calculateCategorySizes()
             }
-            return CGSize(width: categorySizes[indexPath.row], height: 55)
+            if selectedTimeIndex == 0{
+                var  spacing:CGFloat = CGFloat(15 * (viewModel.categories.count - 1))
+                spacing = spacing + 30
+                let width:CGFloat = (UIScreen.main.bounds.width - spacing)/CGFloat(viewModel.categories.count)
+                return CGSize(width: width, height: 20)
+            }
+            return CGSize(width: categorySizes[indexPath.row], height: 20)
         }
         else{
             let w = UIScreen.main.bounds.width - 10
@@ -226,7 +250,7 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
     //calculating categorySizes
     func calculateCategorySizes(){
         for m in viewModel.categories{
-            let w = m.width(forHeight: 14, font: UIFont(name: "Roboto-Regular", size: 12)!) + 16
+            let w = m.width(forHeight: 12, font: UIFont(name: "Roboto-Regular", size: 12)!) + 16
             categorySizes.append(w)
         }
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -21,26 +21,19 @@
         <!--Side Menu View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="SideMenuViewController" id="Y6W-OH-hqX" customClass="SideMenuViewController" customModule="Core_Score" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SideMenuViewController" id="Y6W-OH-hqX" customClass="SideMenuViewController" customModule="Scoreo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9kX-6r-1Wh">
-                                <rect key="frame" x="15" y="185" width="384" height="667"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="15" y="64" width="384" height="788"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="5nG-nR-Q1d"/>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="m3B-32-FBC"/>
                                 </connections>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sideMenuAsset" translatesAutoresizingMaskIntoConstraints="NO" id="gJL-Og-ahq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="TRr-PX-HXu"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pud-eI-1Ua">
                                 <rect key="frame" x="15" y="115" width="384" height="70"/>
                                 <subviews>
@@ -99,14 +92,11 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="9kX-6r-1Wh" secondAttribute="bottom" constant="10" id="1nE-vb-5Hs"/>
-                            <constraint firstItem="gJL-Og-ahq" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="296-Co-6jF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pud-eI-1Ua" secondAttribute="trailing" constant="15" id="7Si-5D-89C"/>
-                            <constraint firstItem="9kX-6r-1Wh" firstAttribute="top" secondItem="gJL-Og-ahq" secondAttribute="bottom" constant="15" id="Q3G-hz-uEl"/>
-                            <constraint firstItem="gJL-Og-ahq" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="XbJ-z9-X2s"/>
-                            <constraint firstItem="gJL-Og-ahq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="igA-Ya-yIc"/>
+                            <constraint firstItem="9kX-6r-1Wh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="bBx-kW-Wwl"/>
                             <constraint firstItem="9kX-6r-1Wh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="kS6-Tj-bXp"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9kX-6r-1Wh" secondAttribute="trailing" constant="15" id="mLa-mB-Fhx"/>
                             <constraint firstItem="pud-eI-1Ua" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="uLE-vk-h2E"/>
@@ -128,20 +118,14 @@
         <!--Language View Controller-->
         <scene sceneID="HOl-JL-By2">
             <objects>
-                <viewController storyboardIdentifier="LanguageViewController" id="bR5-sl-UhC" customClass="LanguageViewController" customModule="Core_Score" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LanguageViewController" id="bR5-sl-UhC" customClass="LanguageViewController" customModule="Scoreo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PbO-rI-3i6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Language" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR5-dU-MhF">
-                                <rect key="frame" x="15" y="59" width="143" height="24"/>
-                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
-                                <color key="textColor" name="black1"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eV1-aI-96R">
-                                <rect key="frame" x="15" y="108" width="384" height="744"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="15" y="64" width="384" height="788"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="bR5-sl-UhC" id="cWZ-IJ-Bpn"/>
                                     <outlet property="delegate" destination="bR5-sl-UhC" id="feA-Vc-Zkj"/>
@@ -149,12 +133,10 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iCF-Mt-SMN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eV1-aI-96R" firstAttribute="top" secondItem="GR5-dU-MhF" secondAttribute="bottom" constant="25" id="1fK-wi-BV6"/>
+                            <constraint firstItem="eV1-aI-96R" firstAttribute="top" secondItem="iCF-Mt-SMN" secondAttribute="top" constant="20" id="6fF-Pm-SNA"/>
                             <constraint firstItem="iCF-Mt-SMN" firstAttribute="bottom" secondItem="eV1-aI-96R" secondAttribute="bottom" constant="10" id="7VK-FR-iOe"/>
-                            <constraint firstItem="GR5-dU-MhF" firstAttribute="leading" secondItem="iCF-Mt-SMN" secondAttribute="leading" constant="15" id="Tcy-VD-eea"/>
-                            <constraint firstItem="GR5-dU-MhF" firstAttribute="top" secondItem="iCF-Mt-SMN" secondAttribute="top" constant="15" id="TrH-5g-3xS"/>
                             <constraint firstItem="iCF-Mt-SMN" firstAttribute="trailing" secondItem="eV1-aI-96R" secondAttribute="trailing" constant="15" id="qES-xT-IMi"/>
                             <constraint firstItem="eV1-aI-96R" firstAttribute="leading" secondItem="iCF-Mt-SMN" secondAttribute="leading" constant="15" id="tre-se-fTs"/>
                         </constraints>
@@ -170,19 +152,19 @@
         <!--Pages View Controller-->
         <scene sceneID="u1k-S2-s4A">
             <objects>
-                <viewController storyboardIdentifier="PagesViewController" id="Ls1-W9-kE0" customClass="PagesViewController" customModule="Core_Score" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PagesViewController" id="Ls1-W9-kE0" customClass="PagesViewController" customModule="Scoreo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BOL-oa-d33">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYa-kV-hB0">
-                                <rect key="frame" x="15" y="59" width="9" height="24"/>
+                                <rect key="frame" x="15" y="59" width="9.5" height="20"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                 <color key="textColor" name="black1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yRO-p1-4iy">
-                                <rect key="frame" x="15" y="98" width="384" height="749"/>
+                                <rect key="frame" x="15" y="94" width="384" height="753"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
@@ -212,7 +194,7 @@
         <!--Alternative View Controller-->
         <scene sceneID="GP7-Hu-9ID">
             <objects>
-                <viewController storyboardIdentifier="AlternativeViewController" id="2Lf-6o-0Ip" customClass="AlternativeViewController" customModule="Core_Score" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlternativeViewController" id="2Lf-6o-0Ip" customClass="AlternativeViewController" customModule="Scoreo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DUs-2q-are">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,10 +228,6 @@
     </scenes>
     <resources>
         <image name="Avatar" width="60" height="60"/>
-        <image name="sideMenuAsset" width="2250" height="861"/>
-        <namedColor name="AccentColor">
-            <color red="1" green="0.37254901960784315" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="black1">
             <color red="0.20000000000000001" green="0.21176470588235294" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

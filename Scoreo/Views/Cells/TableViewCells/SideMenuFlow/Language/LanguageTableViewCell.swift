@@ -9,6 +9,7 @@ import UIKit
 
 class LanguageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imgSelection: UIImageView!
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var lblLanguage: UILabel!
     override func awakeFromNib() {
@@ -27,12 +28,10 @@ class LanguageTableViewCell: UITableViewCell {
     
     func handleSelection(){
         if isSelected{
-            self.backView.backgroundColor = Colors.accentColor()
-            lblLanguage.textColor = .white
+            imgSelection.image = UIImage(named: "selectedRound")
         }
         else{
-            self.backView.backgroundColor = .white
-            lblLanguage.textColor = Colors.accentColor()
+            imgSelection.image = UIImage(named: "deselectedRound")
         }
     }
     

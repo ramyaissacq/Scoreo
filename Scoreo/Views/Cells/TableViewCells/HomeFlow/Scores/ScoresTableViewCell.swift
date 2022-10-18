@@ -121,7 +121,7 @@ class ScoresTableViewCell: UITableViewCell {
     }
     
     @objc func actionLongPress(){
-        callLongPress?()
+        //callLongPress?()
     }
     
     @objc func tapIndex(){

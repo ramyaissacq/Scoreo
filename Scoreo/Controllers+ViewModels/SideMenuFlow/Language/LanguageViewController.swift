@@ -24,6 +24,7 @@ class LanguageViewController: BaseViewController {
     
     func initialSettings(){
         setBackButton()
+        setupNavBar()
         tableView.register(UINib(nibName: "LanguageTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
         var index = 0
@@ -44,6 +45,11 @@ class LanguageViewController: BaseViewController {
         }
         
         tableView.selectRow(at: IndexPath(row: index, section: 0), animated: false, scrollPosition: .top)
+    }
+    
+    func setupNavBar(){
+        let lbl = getHeaderLabel(title: "Language".localized)
+        self.navigationItem.titleView = lbl
     }
     
     func resetLanguage(index:Int){

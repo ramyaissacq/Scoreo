@@ -8,7 +8,7 @@
 import UIKit
 import MessageUI
 
-class SideMenuViewController:UIViewController{
+class SideMenuViewController:BaseViewController{
     @IBOutlet weak var tableView: UITableView!
     var menus = ["Language".localized,"Privacy Policy".localized,"Share App".localized,"Feed Back".localized,"Rate Us".localized]
     
@@ -18,10 +18,14 @@ class SideMenuViewController:UIViewController{
     }
     
     func initialSettings(){
-        //setBackButton()
+        setupNavBar()
         tableView.register(UINib(nibName: "SideMenuTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
     
+    func setupNavBar(){
+        let lbl = getHeaderLabel(title: "Settings".localized)
+        self.navigationItem.titleView = lbl
+    }
     func sendEmail() {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
@@ -62,13 +66,13 @@ extension SideMenuViewController:UITableViewDelegate,UITableViewDataSource{
             
             Utility.openUrl(url: URL(string: "https://corescorelive.blogspot.com/2022/10/privacy-policy-app-store.html")!)
         case 2:
-            Utility.shareAction(text: "Install Core Score from apple appstore", url: nil, image: UIImage(named: "launch"), vc: self.parent!)
+            Utility.shareAction(text: "Install Scoreo from apple appstore", url: nil, image: UIImage(named: "launch"), vc: self.parent!)
             
         case 3:
             sendEmail()
             
         case 4:
-            Utility.rateApp(id: "6443674144")
+            Utility.rateApp(id: "")
             
             
         default:

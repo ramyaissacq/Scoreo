@@ -172,13 +172,13 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Loading...Please wait a while" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMz-Y4-UbG">
                                         <rect key="frame" x="113" y="408.5" width="168.5" height="15.5"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                         <color key="textColor" name="gray1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FD4-fB-H2b" customClass="AnimationView" customModule="Lottie">
                                         <rect key="frame" x="15" y="185.5" width="364" height="215"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="215" id="IHL-ru-Iob"/>
                                         </constraints>
@@ -187,7 +187,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="fMz-Y4-UbG" firstAttribute="top" secondItem="FD4-fB-H2b" secondAttribute="bottom" constant="8" id="DxG-T0-3Hq"/>
                                     <constraint firstItem="FD4-fB-H2b" firstAttribute="leading" secondItem="L4o-oM-avv" secondAttribute="leading" constant="15" id="JX9-re-OaN"/>
@@ -293,7 +293,7 @@
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="p7P-f0-9f6">
                                 <rect key="frame" x="5" y="130" width="404" height="727"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="UTm-Aa-S8a" id="ri8-J3-pm1"/>
                                     <outlet property="delegate" destination="UTm-Aa-S8a" id="3i7-BZ-0CA"/>
@@ -301,7 +301,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dqq-aY-eEZ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="P2T-hp-PoZ" firstAttribute="top" secondItem="dqq-aY-eEZ" secondAttribute="top" constant="20" id="3zg-qk-8fg"/>
                             <constraint firstItem="P2T-hp-PoZ" firstAttribute="leading" secondItem="dqq-aY-eEZ" secondAttribute="leading" constant="15" id="5Ry-9d-7kZ"/>
@@ -1261,7 +1261,7 @@
         <image name="dropdownWhite" width="15" height="9"/>
         <image name="noData" width="433" height="278"/>
         <namedColor name="AccentColor">
-            <color red="1" green="0.37254901960784315" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.29803921568627451" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="black1">
             <color red="0.20000000000000001" green="0.21176470588235294" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

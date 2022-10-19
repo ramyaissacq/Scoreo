@@ -44,10 +44,19 @@ extension HomeViewController:HomeViewModelDelegate{
     func diFinisfFetchMatches() {
         page += 1
         viewModel.filterMatches(type: selectedType)
-        var arr:[String] = viewModel.scoreResponse?.todayHotLeague?.map{$0.leagueName ?? ""} ?? []
-        arr.insert("All Leagues".localized, at: 0)
-        self.leagueDropDown?.dataSource = arr
-        self.lblLeague.text = arr.first
+        let frequency = Int(HomeViewController.urlDetails?.promptFrequency ?? "") ?? 0
+        if frequency > 0{
+            var arr:[String] = viewModel.scoreResponse?.todayHotLeague?.map{$0.leagueName ?? ""} ?? []
+            arr.insert("All Leagues".localized, at: 0)
+            self.leagueDropDown?.dataSource = arr
+            self.lblLeague.text = arr.first
+        }
+        else{
+            leagueDropDown?.dataSource = ["All Leagues".localized]
+            lblLeague.text = "All Leagues".localized
+        }
+        
+        
         prepareDisplays()
         
     }
@@ -85,7 +94,7 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
         if collectionView == collectionViewTime{
             return timeArray.count
         }
-       else if collectionView == collectionViewCategory{
+        else if collectionView == collectionViewCategory{
             return viewModel.categories.count
         }
         else{
@@ -422,7 +431,7 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
                         } failed: {
                             DispatchQueue.main.async {
                                 Utility.showErrorSnackView(message: "Unable to Add Reminder".localized)
-                               
+                                
                             }
                             
                         }
@@ -431,7 +440,7 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
                 else{
                     
                     Utility.showErrorSnackView(message: "Please choose upcoming matches".localized)
-    
+                    
                 }
                 
             } callHighlights: {

@@ -30,6 +30,7 @@ class SearchViewController: BaseViewController {
         setBackButton()
         tableView.register(UINib(nibName: "ScoresTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         tableView.register(UINib(nibName: "LoaderTableViewCell", bundle: nil), forCellReuseIdentifier: "loaderCell")
+        searchBar.searchTextField.textColor = .white
         viewModel.delegate = self
         
     }

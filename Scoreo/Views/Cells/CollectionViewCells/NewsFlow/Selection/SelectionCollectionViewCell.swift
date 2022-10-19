@@ -28,6 +28,7 @@ class SelectionCollectionViewCell: UICollectionViewCell {
         // Initialization code
 //        let tap = UITapGestureRecognizer(target: self, action: #selector(tapCall))
 //        stack.addGestureRecognizer(tap)
+        handleSelection()
     }
     
     override var isSelected: Bool{

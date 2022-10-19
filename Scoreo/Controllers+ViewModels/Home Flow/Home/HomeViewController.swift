@@ -57,7 +57,7 @@ class HomeViewController: BaseViewController {
         initialSettings()
     }
     
-   
+    
     
     func initialSettings(){
         
@@ -107,9 +107,9 @@ class HomeViewController: BaseViewController {
     }
     
     
-   
     
-   
+    
+    
     
     func configureSportsDropDown(){
         
@@ -134,15 +134,15 @@ class HomeViewController: BaseViewController {
     func configureSportSelection(){
         resetSportType()
         if selectedSportsType == .soccer{
-        if AppPreferences.getMatchHighlights().count > 0{
-            collectionViewHighlightsHeight.constant = 180
-            collectionViewHighlights.reloadData()
-            highlightsStack.isHidden = false
-            pageControl.numberOfPages = AppPreferences.getMatchHighlights().count
-        }
-        else{
-            highlightsStack.isHidden = true
-        }
+            if AppPreferences.getMatchHighlights().count > 0{
+                collectionViewHighlightsHeight.constant = 180
+                collectionViewHighlights.reloadData()
+                highlightsStack.isHidden = false
+                pageControl.numberOfPages = AppPreferences.getMatchHighlights().count
+            }
+            else{
+                highlightsStack.isHidden = true
+            }
         }
         else{
             if AppPreferences.getBasketBallHighlights().count > 0{
@@ -191,10 +191,19 @@ class HomeViewController: BaseViewController {
         selectedTimeIndex = 0
         collectionViewTime.selectItem(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .left)
         if selectedSportsType == .soccer{
-            var arr:[String] = viewModel.scoreResponse?.todayHotLeague?.map{$0.leagueName ?? ""} ?? []
-            arr.insert("All Leagues".localized, at: 0)
-            self.leagueDropDown?.dataSource = arr
-            lblLeague.text = arr.first
+            let frequency = Int(HomeViewController.urlDetails?.promptFrequency ?? "") ?? 0
+            if frequency > 0{
+                
+                var arr:[String] = viewModel.scoreResponse?.todayHotLeague?.map{$0.leagueName ?? ""} ?? []
+                arr.insert("All Leagues".localized, at: 0)
+                self.leagueDropDown?.dataSource = arr
+                lblLeague.text = arr.first
+            }
+            else{
+                leagueDropDown?.dataSource = ["All Leagues".localized]
+                lblLeague.text = "All Leagues".localized
+            }
+            
             page = 1
             viewModel.getMatchesList(page: page)
         }
@@ -209,40 +218,46 @@ class HomeViewController: BaseViewController {
     
     func handleTimeSelection(index:Int){
         
-            selectedTimeIndex = index
-            switch index{
-            case 0:
-                viewModel.categories = viewModel.todayCategories
-                collectionViewCategory.reloadData()
-                if selectedSportsType == .soccer{
+        selectedTimeIndex = index
+        switch index{
+        case 0:
+            viewModel.categories = viewModel.todayCategories
+            collectionViewCategory.reloadData()
+            if selectedSportsType == .soccer{
+                let frequency = Int(HomeViewController.urlDetails?.promptFrequency ?? "") ?? 0
+                if frequency > 0{
                     var arr:[String] = viewModel.scoreResponse?.todayHotLeague?.map{$0.leagueName ?? ""} ?? []
                     arr.insert("All Leagues".localized, at: 0)
                     self.leagueDropDown?.dataSource = arr
                     lblLeague.text = arr.first
-                    page = 1
-                    viewModel.getMatchesList(page: page)
                 }
                 else{
-                    viewModel.getBasketballScores()
+                    leagueDropDown?.dataSource = ["All Leagues".localized]
+                    lblLeague.text = "All Leagues".localized
                 }
-            case 1:
-                viewModel.categories = viewModel.pastDates
-                leagueDropDown?.dataSource = ["All Leagues".localized]
-                lblLeague.text = "All Leagues".localized
-            case 2:
-                viewModel.categories = viewModel.futureDates
-                leagueDropDown?.dataSource = ["All Leagues".localized]
-                lblLeague.text = "All Leagues".localized
                 
-            default:
-                break
+                page = 1
+                viewModel.getMatchesList(page: page)
             }
-            categorySizes.removeAll()
-            collectionViewCategory.reloadData()
-            collectionViewCategory.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
-            collectionViewCategory.delegate?.collectionView?(collectionViewCategory, didSelectItemAt: IndexPath(row: 0, section: 0))
+            else{
+                viewModel.getBasketballScores()
+            }
+        case 1:
+            viewModel.categories = viewModel.pastDates
+            leagueDropDown?.dataSource = ["All Leagues".localized]
+            lblLeague.text = "All Leagues".localized
+        case 2:
+            viewModel.categories = viewModel.futureDates
+            leagueDropDown?.dataSource = ["All Leagues".localized]
+            lblLeague.text = "All Leagues".localized
             
-        
+        default:
+            break
+        }
+        categorySizes.removeAll()
+        collectionViewCategory.reloadData()
+        collectionViewCategory.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+        collectionViewCategory.delegate?.collectionView?(collectionViewCategory, didSelectItemAt: IndexPath(row: 0, section: 0))
         
     }
     
@@ -275,7 +290,7 @@ class HomeViewController: BaseViewController {
         sportDropDown?.show()
     }
     
-   
+    
     
     @objc func swipe(sender:UISwipeGestureRecognizer){
         if sender.direction == .left{
@@ -313,12 +328,10 @@ class HomeViewController: BaseViewController {
     func setupNavButtons(){
         sportsView = SportsView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: sportsView!)
-        let leftBtn = getButton(image: UIImage(named: "menu")!)
-        leftBtn.addTarget(self, action: #selector(menuTapped), for: .touchUpInside)
         
         let rightBtn = getButton(image: UIImage(named: "search")!)
         rightBtn.addTarget(self, action: #selector(searchTapped), for: .touchUpInside)
-        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: rightBtn),UIBarButtonItem(customView: leftBtn)]
+        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: rightBtn)]
     }
     
     @objc func menuTapped(){
@@ -358,7 +371,7 @@ class HomeViewController: BaseViewController {
     }
     
     
-   static func showPopup(){
+    static func showPopup(){
         let frequency = AppPreferences.getPopupFrequency()
         let promptFrequency = Int(HomeViewController.urlDetails?.promptFrequency ?? "") ?? 0
         if frequency < promptFrequency{

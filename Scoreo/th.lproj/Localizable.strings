@@ -191,6 +191,10 @@
 
 ////////////////////////////////////////////////////
 
-"Highlights" = "Highlights";
-"AUTOPLAY" = "AUTOPLAY";
-"Most Watched" = "Most Watched";
+"Highlights" = "ไฮไลท์";
+"AUTOPLAY" = "เล่นอัตโนมัติ";
+"Most Watched" = "มีคนดูมากที่สุด";
+"Search" = "ค้นหา";
+"CANCEL" = "ยกเลิก";
+"DELAY" = "ล่าช้า";
+"Settings" = "การตั้งค่า";

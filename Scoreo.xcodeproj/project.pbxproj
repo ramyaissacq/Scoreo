@@ -10,6 +10,7 @@
 		0CEFECC725BFF0E8936C347C /* Pods_Scoreo_ScoreoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8FC2810333C212165D9AFB /* Pods_Scoreo_ScoreoUITests.framework */; };
 		43926B849DE9A294E3DE67B6 /* Pods_ScoreoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B26FE0E42C73FA1D947105 /* Pods_ScoreoTests.framework */; };
 		66A3790CD43A842D961A2B81 /* Pods_Scoreo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB615188F3FE95D26030686 /* Pods_Scoreo.framework */; };
+		AD2407DA28FFC7EB00EC5A49 /* football.json in Resources */ = {isa = PBXBuildFile; fileRef = AD2407D928FFC7EB00EC5A49 /* football.json */; };
 		AD2E3E6828F7F0C900F41A60 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD2E3E6A28F7F0C900F41A60 /* Localizable.strings */; };
 		AD62DAE428F69AF100730317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62DAE328F69AF100730317 /* AppDelegate.swift */; };
 		AD62DAF028F69AF300730317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD62DAEE28F69AF300730317 /* LaunchScreen.storyboard */; };
@@ -245,7 +246,6 @@
 		AD62DD6E28F6A1D500730317 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD6828F6A1D500730317 /* loading.json */; };
 		AD62DD7028F6A1D500730317 /* prize.json in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD6A28F6A1D500730317 /* prize.json */; };
 		AD62DD7128F6A1D500730317 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD6B28F6A1D500730317 /* Colors.xcassets */; };
-		AD62DD7228F6A1D500730317 /* football.json in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD6C28F6A1D500730317 /* football.json */; };
 		AD62DD7428F6A33400730317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD7328F6A33400730317 /* Assets.xcassets */; };
 		AD62DD7728F6A75C00730317 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD7628F6A75C00730317 /* Roboto-Regular.ttf */; };
 		AD62DD7928F6A7D900730317 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD7828F6A7D900730317 /* Roboto-Medium.ttf */; };
@@ -277,6 +277,7 @@
 		7414C0FAD4140ED46A03A82D /* Pods-Scoreo-ScoreoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scoreo-ScoreoUITests.release.xcconfig"; path = "Target Support Files/Pods-Scoreo-ScoreoUITests/Pods-Scoreo-ScoreoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		85CE495B9B07175EB5F40969 /* Pods-ScoreoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreoTests.debug.xcconfig"; path = "Target Support Files/Pods-ScoreoTests/Pods-ScoreoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8B26FE0E42C73FA1D947105 /* Pods_ScoreoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScoreoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD2407D928FFC7EB00EC5A49 /* football.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = football.json; sourceTree = "<group>"; };
 		AD2E3E6928F7F0C900F41A60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AD2E3E6B28F7F0CB00F41A60 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		AD2E3E6C28F7F0CE00F41A60 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -540,7 +541,6 @@
 		AD62DD6828F6A1D500730317 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		AD62DD6A28F6A1D500730317 /* prize.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = prize.json; sourceTree = "<group>"; };
 		AD62DD6B28F6A1D500730317 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		AD62DD6C28F6A1D500730317 /* football.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = football.json; sourceTree = "<group>"; };
 		AD62DD7328F6A33400730317 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD62DD7628F6A75C00730317 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		AD62DD7828F6A7D900730317 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -637,7 +637,7 @@
 				AD62DB1328F6A09300730317 /* Views */,
 				AD62DD6B28F6A1D500730317 /* Colors.xcassets */,
 				AD62DD7328F6A33400730317 /* Assets.xcassets */,
-				AD62DD6C28F6A1D500730317 /* football.json */,
+				AD2407D928FFC7EB00EC5A49 /* football.json */,
 				AD62DD6828F6A1D500730317 /* loading.json */,
 				AD62DD6A28F6A1D500730317 /* prize.json */,
 				AD2E3E6A28F7F0C900F41A60 /* Localizable.strings */,
@@ -1949,6 +1949,7 @@
 				AD62DC9C28F6A09500730317 /* HeighlightsTableViewCell.xib in Resources */,
 				AD62DCB328F6A09500730317 /* EventsAwayTableViewCell.xib in Resources */,
 				AD62DC9F28F6A09500730317 /* GeneralRowTableViewCell.xib in Resources */,
+				AD2407DA28FFC7EB00EC5A49 /* football.json in Resources */,
 				AD62DC9728F6A09500730317 /* SideMenuTableViewCell.xib in Resources */,
 				AD62DCBE28F6A09500730317 /* RankCollectionViewCell.xib in Resources */,
 				AD62DCA128F6A09500730317 /* AnalysisOddsTableViewCell.xib in Resources */,
@@ -1957,7 +1958,6 @@
 				AD62DCC428F6A09500730317 /* TeamCollectionViewCell.xib in Resources */,
 				AD62DCAE28F6A09500730317 /* LeagueTableViewCell.xib in Resources */,
 				AD62DC8828F6A09500730317 /* SideMenu.strings in Resources */,
-				AD62DD7228F6A1D500730317 /* football.json in Resources */,
 				AD62DCD828F6A09500730317 /* ScoresView.xib in Resources */,
 				AD62DCA228F6A09500730317 /* AnalysisFooterTableViewCell.xib in Resources */,
 				AD62DCC728F6A09500730317 /* TypesCollectionViewCell.xib in Resources */,
@@ -2570,6 +2570,7 @@
 				DEVELOPMENT_TEAM = 9C9FU36V4K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Scoreo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "775 Sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -2602,6 +2603,7 @@
 				DEVELOPMENT_TEAM = 9C9FU36V4K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Scoreo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "775 Sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

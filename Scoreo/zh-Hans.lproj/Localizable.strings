@@ -189,6 +189,10 @@
 
 ////////////////////////////////////////////////////
 
-"Highlights" = "Highlights";
-"AUTOPLAY" = "AUTOPLAY";
-"Most Watched" = "Most Watched";
+"Highlights" = "强调";
+"AUTOPLAY" = "自动播放";
+"Most Watched" = "最受关注";
+"Search" = "搜索";
+"CANCEL" = "取消";
+"DELAY" = "延迟";
+"Settings" = "设置";

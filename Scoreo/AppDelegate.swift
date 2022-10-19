@@ -12,14 +12,17 @@ import MOLH
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable {
     var window: UIWindow?
-
-
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Utility.callURlDetailsAPI()
         IQKeyboardManager.shared.enable = true
         MOLH.shared.activate(true)
         MOLHLanguage.setDefaultLanguage("en")
+        if getPhoneLanguage() == "zh"{
+            MOLHLanguage.setAppleLAnguageTo("zh-Hans")
+        }
         UNUserNotificationCenter.current().delegate = self
         prepareSendNotifications()
         application.registerForRemoteNotifications()
@@ -34,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable {
         
         return true
     }
-
+    
     func applicationWillTerminate(_ application: UIApplication) {
         
     }
@@ -43,40 +46,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable {
         Utility.gotoHome()
     }
     
+    func getPhoneLanguage() -> String{
+        var locale = NSLocale.current.languageCode!
+        let countryCode = (Locale.current as NSLocale).object(forKey: .countryCode) as? String ?? ""
+        if countryCode == "CN"{
+            locale = "zh"
+        }
+        return locale
+        
+    }
     
-
-
+    
 }
 
 
 extension AppDelegate:UNUserNotificationCenterDelegate{
-func prepareSendNotifications(){
-    UNUserNotificationCenter.current().getNotificationSettings { (notificationSettings) in
+    func prepareSendNotifications(){
+        UNUserNotificationCenter.current().getNotificationSettings { (notificationSettings) in
             switch notificationSettings.authorizationStatus {
             case .notDetermined:
                 self.requestAuthorization(completionHandler: { (success) in
                     guard success else { return }
                     
                 })
-           
+                
             default:
                 break
             }
         }
-    
-}
-
-
-private func requestAuthorization(completionHandler: @escaping (_ success: Bool) -> ()) {
-    // Request Authorization
-    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
-        if let error = error {
-            print("Request Authorization Failed (\(error), \(error.localizedDescription))")
-        }
-
-        completionHandler(success)
+        
     }
-}
+    
+    
+    private func requestAuthorization(completionHandler: @escaping (_ success: Bool) -> ()) {
+        // Request Authorization
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
+            if let error = error {
+                print("Request Authorization Failed (\(error), \(error.localizedDescription))")
+            }
+            
+            completionHandler(success)
+        }
+    }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.list, .banner, .sound])
@@ -91,14 +102,14 @@ private func requestAuthorization(completionHandler: @escaping (_ success: Bool)
                     vc.selectedMatch =  AppPreferences.getPinList().filter{$0.matchId == id}.first
                     vc.selectedCategory = .index
                     navigation.pushViewController(vc, animated: true)
-                        
+                    
                     
                 }
             }
             
         }
         
-
+        
         completionHandler()
     }
 }

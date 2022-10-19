@@ -190,6 +190,10 @@
 
 ////////////////////////////////////////////////////
 
-"Highlights" = "Highlights";
-"AUTOPLAY" = "AUTOPLAY";
-"Most Watched" = "Most Watched";
+"Highlights" = "Highlight";
+"AUTOPLAY" = "PEMAIN OTOMATIS";
+"Most Watched" = "Paling Banyak Ditonton";
+"Search" = "Mencari";
+"CANCEL" = "MEMBATALKAN";
+"DELAY" = "MENUNDA";
+"Settings" = "Pengaturan";

@@ -18,7 +18,7 @@
         <!--Drop Down View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="DropDownViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DropDownViewController" customModule="Core_Score" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DropDownViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DropDownViewController" customModule="Scoreo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FxE-FO-Xj8"/>
                         <viewControllerLayoutGuide type="bottom" id="Rlc-U1-1Sa"/>
@@ -98,7 +98,7 @@
         <!--Successfull Dialog-->
         <scene sceneID="LT4-d8-eBe">
             <objects>
-                <viewController storyboardIdentifier="SuccessfullDialog" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qUz-93-lF8" customClass="SuccessfullDialog" customModule="Core_Score" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SuccessfullDialog" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qUz-93-lF8" customClass="SuccessfullDialog" customModule="Scoreo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BW0-GV-PqY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="252"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,7 +123,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9w-sx-h2e">
                                         <rect key="frame" x="40" y="162" width="334" height="50"/>
-                                        <color key="backgroundColor" name="SecondaryColor"/>
+                                        <color key="backgroundColor" name="appViolet"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MIv-fe-G8s"/>
                                         </constraints>
@@ -184,7 +184,7 @@
         <!--Match Options View Controller-->
         <scene sceneID="xgN-GS-seW">
             <objects>
-                <viewController storyboardIdentifier="MatchOptionsViewController" id="Di1-dM-wPa" customClass="MatchOptionsViewController" customModule="Core_Score" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MatchOptionsViewController" id="Di1-dM-wPa" customClass="MatchOptionsViewController" customModule="Scoreo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vog-UI-Fyd"/>
                         <viewControllerLayoutGuide type="bottom" id="b4c-Yv-UGV"/>
@@ -210,7 +210,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWC-7g-y0x">
-                                                        <rect key="frame" x="0.0" y="25" width="100" height="34"/>
+                                                        <rect key="frame" x="0.0" y="25" width="100" height="28"/>
                                                         <string key="text">Add 
 Reminder</string>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
@@ -240,7 +240,7 @@ Reminder</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubx-gx-jlV">
-                                                        <rect key="frame" x="0.0" y="25" width="100" height="34"/>
+                                                        <rect key="frame" x="0.0" y="25" width="100" height="28"/>
                                                         <string key="text">Add to
 Highlights</string>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
@@ -270,7 +270,7 @@ Highlights</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FM2-FY-szC">
-                                                        <rect key="frame" x="0.0" y="25" width="100" height="34"/>
+                                                        <rect key="frame" x="0.0" y="25" width="100" height="28"/>
                                                         <string key="text">Pin Live 
 Score</string>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
@@ -350,7 +350,7 @@ Score</string>
         <!--Confirmation View Controller-->
         <scene sceneID="eZs-Dp-GQA">
             <objects>
-                <viewController storyboardIdentifier="ConfirmationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fXT-ze-58V" customClass="ConfirmationViewController" customModule="Core_Score" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConfirmationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fXT-ze-58V" customClass="ConfirmationViewController" customModule="Scoreo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Edu-d9-JAb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -442,10 +442,10 @@ Score</string>
         <image name="pin" width="17" height="24"/>
         <image name="reminder" width="21" height="23.5"/>
         <namedColor name="AccentColor">
-            <color red="1" green="0.37254901960784315" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.29803921568627451" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="SecondaryColor">
-            <color red="0.95300000905990601" green="0.49000000953674316" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="appViolet">
+            <color red="0.59215686274509804" green="0.27843137254901962" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="vcBg">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

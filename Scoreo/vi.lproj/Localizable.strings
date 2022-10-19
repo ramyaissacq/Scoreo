@@ -190,6 +190,10 @@
 
 ////////////////////////////////////////////////////
 
-"Highlights" = "Highlights";
-"AUTOPLAY" = "AUTOPLAY";
-"Most Watched" = "Most Watched";
+"Highlights" = "Điểm nổi bật";
+"AUTOPLAY" = "TỰ CHẠY";
+"Most Watched" = "Xem nhiều nhất";
+"Search" = "Tìm kiếm";
+"CANCEL" = "SỰ HỦY BỎ";
+"DELAY" = "SỰ CHẬM TRỄ";
+"Settings" = "Cài đặt";

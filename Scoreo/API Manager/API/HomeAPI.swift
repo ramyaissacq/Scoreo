@@ -144,7 +144,7 @@ class HomeAPI: WebService {
         let url = "https://ios.8xapp.app/api/v1/setting.php"
         let version = Bundle.main.infoDictionary!["CFBundleShortVersionString"]!
         let build = Bundle.main.infoDictionary!["CFBundleVersion"]!
-        //"com.kufangkeji.corescoresports",
+        //"com.test.app",
         //
         let params:[String:Any] = ["package_name":Bundle.main.bundleIdentifier ?? "",
             "platform":"iOS",

@@ -166,8 +166,12 @@ class ScoresTableViewCell: UITableViewCell {
         lblHomeRed.text = "\(obj?.homeRed ?? 0)"
         lblAwayRed.text = "\(obj?.awayRed ?? 0)"
         let mins = ScoresTableViewCell.timeInMins(startDate: obj?.startTime ?? "")
-        
+        if obj?.state == -1{
+            lblTime.text = ScoresTableViewCell.getStatus(state: obj?.state ?? 0)
+        }
+        else{
         lblTime.text = "\(ScoresTableViewCell.getStatus(state: obj?.state ?? 0)) \(mins)'"
+        }
         if obj?.state == 0{
             let matchDate = Utility.getSystemTimeZoneTime(dateString: obj?.matchTime ?? "")
             lblTime.text = Utility.formatDate(date: matchDate, with: .hhmm2)
@@ -290,7 +294,12 @@ class ScoresTableViewCell: UITableViewCell {
         }
         
         let mins = ScoresTableViewCell.timeInMins(startDate: obj?.matchTime ?? "")
+        if obj?.matchState == -1{
+            lblTime.text = ScoresTableViewCell.getBasketballStatus(state: obj?.matchState ?? 0)
+        }
+        else{
         lblTime.text = "\(ScoresTableViewCell.getBasketballStatus(state: obj?.matchState ?? 0)) \(mins)'"
+        }
         if obj?.matchState == 0{
             let matchDate = Utility.getSystemTimeZoneTime(dateString: obj?.matchTime ?? "")
             lblTime.text = Utility.formatDate(date: matchDate, with: .hhmm2)

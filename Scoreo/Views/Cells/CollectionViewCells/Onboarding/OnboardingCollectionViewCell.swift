@@ -11,19 +11,22 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var orangeView: UIView!
     
     @IBOutlet weak var btnSkip: UIButton!
     @IBOutlet weak var nextView: UIView!
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var imgCurrent: UIImageView!
     
-    @IBOutlet weak var fixedNext: UILabel!
+    
     var callSkip:(()->Void)?
     var callNext:(()->Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        let gradient = btnSkip.getGradientLayer(bounds: btnSkip.bounds)
+        btnSkip.setTitleColor(btnSkip.gradientColor(bounds: btnSkip.bounds, gradientLayer: gradient), for: .normal)
         
     }
     

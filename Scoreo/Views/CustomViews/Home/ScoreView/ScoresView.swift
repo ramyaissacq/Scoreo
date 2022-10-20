@@ -119,7 +119,14 @@ class ScoresView: UIView {
         //let timeDifference = Date() - Utility.getSystemTimeZoneTime(dateString: obj?.startTime ?? "")
         let mins = ScoresTableViewCell.timeInMins(startDate: obj?.startTime ?? "")
         //ScoresTableViewCell.getMinutesFromTimeInterval(interval: timeDifference)
-        lblDate.text = "\(ScoresTableViewCell.getStatus(state: obj?.state ?? 0)) \(mins)'"
+        if obj?.state == -1{
+            lblDate.text = ScoresTableViewCell.getStatus(state: obj?.state ?? 0)
+        }
+        else{
+            lblDate.text = "\(ScoresTableViewCell.getStatus(state: obj?.state ?? 0)) \(mins)'"
+            
+        }
+        
         if obj?.state == 0{
             lblScore.text = "SOON".localized
             let date = Utility.getSystemTimeZoneTime(dateString: obj?.matchTime ?? "")
@@ -229,17 +236,23 @@ class ScoresView: UIView {
         
         }
         
-        if obj?.matchState == 0{
-            lblScore.text = "SOON".localized
-        }
-        else{
-        lblScore.text = "\(obj?.homeScore ?? "" ) : \(obj?.awayScore ?? "")"
-        }
+        
         let date = Utility.getSystemTimeZoneTime(dateString: obj?.matchTime ?? "")
         lblDate.text = Utility.formatDate(date: date, with: .eddmmm)
         
-        let matchDate = Utility.getSystemTimeZoneTime(dateString: obj?.matchTime ?? "")
-        lblTime.text = Utility.formatDate(date: matchDate, with: .hhmm2)
+        
+        let mins = ScoresTableViewCell.timeInMins(startDate: obj?.matchTime ?? "")
+        if obj?.matchState == -1{
+            lblTime.text = ScoresTableViewCell.getBasketballStatus(state: obj?.matchState ?? 0)
+        }
+        else{
+        lblTime.text = "\(ScoresTableViewCell.getBasketballStatus(state: obj?.matchState ?? 0)) \(mins)'"
+        }
+        
+        if obj?.matchState == 0{
+            let matchDate = Utility.getSystemTimeZoneTime(dateString: obj?.matchTime ?? "")
+            lblTime.text = Utility.formatDate(date: matchDate, with: .hhmm2)
+        }
         
             lblHandicap1.text = String(obj?.odds?.moneyLineAverage?.liveHomeWinRate ?? 0)
         

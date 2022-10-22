@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -61,14 +62,14 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noData" translatesAutoresizingMaskIntoConstraints="NO" id="WIQ-CQ-uKe">
-                                        <rect key="frame" x="107" y="234" width="200" height="150"/>
+                                        <rect key="frame" x="107" y="334" width="200" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="6e2-06-8Nh"/>
                                             <constraint firstAttribute="width" constant="200" id="VWq-RT-ehS"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Sorry...No News Found!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJU-hL-tmb">
-                                        <rect key="frame" x="138" y="392" width="138.5" height="15.5"/>
+                                        <rect key="frame" x="138" y="492" width="138.5" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                         <color key="textColor" name="gray1"/>
                                         <nil key="highlightedColor"/>
@@ -79,7 +80,7 @@
                                     <constraint firstItem="WIQ-CQ-uKe" firstAttribute="centerX" secondItem="iDS-r0-WgK" secondAttribute="centerX" id="3GM-mn-Pf2"/>
                                     <constraint firstItem="nJU-hL-tmb" firstAttribute="centerX" secondItem="iDS-r0-WgK" secondAttribute="centerX" id="PSu-No-fl8"/>
                                     <constraint firstItem="nJU-hL-tmb" firstAttribute="top" secondItem="WIQ-CQ-uKe" secondAttribute="bottom" constant="8" id="fIU-1C-SmA"/>
-                                    <constraint firstItem="WIQ-CQ-uKe" firstAttribute="centerY" secondItem="iDS-r0-WgK" secondAttribute="centerY" constant="-100" id="pqr-eC-x7Q"/>
+                                    <constraint firstItem="WIQ-CQ-uKe" firstAttribute="centerY" secondItem="iDS-r0-WgK" secondAttribute="centerY" id="pqr-eC-x7Q"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -215,14 +216,14 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noData" translatesAutoresizingMaskIntoConstraints="NO" id="ST0-qd-JXz">
-                                        <rect key="frame" x="107" y="234" width="200" height="150"/>
+                                        <rect key="frame" x="107" y="334" width="200" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="cGx-GI-ZJ6"/>
                                             <constraint firstAttribute="height" constant="150" id="qw7-lq-NEI"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Sorry...No News Details Found!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pH-5Q-9dm">
-                                        <rect key="frame" x="116.5" y="392" width="181.5" height="15.5"/>
+                                        <rect key="frame" x="116.5" y="492" width="181.5" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                         <color key="textColor" name="gray1"/>
                                         <nil key="highlightedColor"/>
@@ -230,7 +231,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="ST0-qd-JXz" firstAttribute="centerY" secondItem="QZk-6W-Zme" secondAttribute="centerY" constant="-100" id="AIl-7i-pxp"/>
+                                    <constraint firstItem="ST0-qd-JXz" firstAttribute="centerY" secondItem="QZk-6W-Zme" secondAttribute="centerY" id="AIl-7i-pxp"/>
                                     <constraint firstItem="7pH-5Q-9dm" firstAttribute="top" secondItem="ST0-qd-JXz" secondAttribute="bottom" constant="8" id="AKs-yL-gRj"/>
                                     <constraint firstItem="ST0-qd-JXz" firstAttribute="centerX" secondItem="QZk-6W-Zme" secondAttribute="centerX" id="Q7m-c2-Tk4"/>
                                     <constraint firstItem="7pH-5Q-9dm" firstAttribute="centerX" secondItem="QZk-6W-Zme" secondAttribute="centerX" id="Ymn-xI-Hkz"/>
@@ -305,7 +306,7 @@
                                 <rect key="frame" x="0.0" y="364" width="414" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Watched" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLV-PQ-tfW">
-                                        <rect key="frame" x="15" y="10" width="111" height="20"/>
+                                        <rect key="frame" x="15" y="10" width="110" height="20"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                         <color key="textColor" name="AccentColor"/>
                                         <nil key="highlightedColor"/>
@@ -315,7 +316,7 @@
                                         <color key="onTintColor" name="appViolet"/>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUTOPLAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gT9-Sj-dvc">
-                                        <rect key="frame" x="272" y="11.5" width="77" height="17.5"/>
+                                        <rect key="frame" x="274.5" y="11" width="74.5" height="18"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -379,7 +380,7 @@
         <image name="noData" width="433" height="278"/>
         <image name="time" width="10" height="10"/>
         <namedColor name="AccentColor">
-            <color red="1" green="0.37254901960784315" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.85490196078431369" green="0.27058823529411763" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="appViolet">
             <color red="0.59215686274509804" green="0.27843137254901962" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

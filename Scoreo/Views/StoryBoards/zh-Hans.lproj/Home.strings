@@ -12,10 +12,10 @@
 "B9M-d4-bXQ.text" = " ";
 
 /* Class = "UILabel"; text = "Recommendations"; ObjectID = "BLz-N0-93P"; */
-"BLz-N0-93P.text" = "建议";
+"BLz-N0-93P.text" = "推荐";
 
 /* Class = "UILabel"; text = "Win/Lose"; ObjectID = "CV1-wQ-9KA"; */
-"CV1-wQ-9KA.text" = "Win/Lose";
+"CV1-wQ-9KA.text" = "赢/输";
 
 /* Class = "UILabel"; text = "Briefing"; ObjectID = "D3p-A4-Dcc"; */
 "D3p-A4-Dcc.text" = "简报";
@@ -27,10 +27,10 @@
 "GIC-jG-fKS.text" = "信心指数";
 
 /* Class = "UISearchBar"; placeholder = "Search Matches"; ObjectID = "P2T-hp-PoZ"; */
-"P2T-hp-PoZ.placeholder" = "搜索匹配";
+"P2T-hp-PoZ.placeholder" = "搜索赛事";
 
 /* Class = "UILabel"; text = "Match Track Record"; ObjectID = "Pcb-zE-PVm"; */
-"Pcb-zE-PVm.text" = "比赛记录";
+"Pcb-zE-PVm.text" = "对赛往绩";
 
 /* Class = "UILabel"; text = "Loading...Please wait a while"; ObjectID = "Qmc-it-MJp"; */
 "Qmc-it-MJp.text" = "加载中...请稍等";
@@ -39,13 +39,13 @@
 "R9l-ed-t4y.text" = "今天";
 
 /* Class = "UILabel"; text = "Spread"; ObjectID = "WK8-me-q5V"; */
-"WK8-me-q5V.text" = "传播";
+"WK8-me-q5V.text" = "让分盘";
 
 /* Class = "UILabel"; text = "Latest Five Games"; ObjectID = "bY8-1Y-a6z"; */
-"bY8-1Y-a6z.text" = "最新五场比赛";
+"bY8-1Y-a6z.text" = "近五场";
 
 /* Class = "UILabel"; text = "Total"; ObjectID = "bkc-Jt-AQT"; */
-"bkc-Jt-AQT.text" = "全部的";
+"bkc-Jt-AQT.text" = "总计";
 
 /* Class = "UILabel"; text = "Loading...Please wait a while"; ObjectID = "fMz-Y4-UbG"; */
 "fMz-Y4-UbG.text" = "加载中...请稍等";
@@ -57,7 +57,7 @@
 "hvb-r4-txa.text" = "描述";
 
 /* Class = "UILabel"; text = "Highlights"; ObjectID = "ikx-po-TsT"; */
-"ikx-po-TsT.text" = "强调";
+"ikx-po-TsT.text" = "亮点";
 
 /* Class = "UILabel"; text = " "; ObjectID = "rFw-PS-c1b"; */
 "rFw-PS-c1b.text" = " ";

@@ -16,25 +16,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UNUserNotificationCenter.current().delegate = self
+        prepareSendNotifications()
+        application.registerForRemoteNotifications()
         Utility.callURlDetailsAPI()
         IQKeyboardManager.shared.enable = true
         MOLH.shared.activate(true)
         MOLHLanguage.setDefaultLanguage("en")
         if getPhoneLanguage() == "zh"{
             MOLHLanguage.setAppleLAnguageTo("zh-Hans")
-        }
-        UNUserNotificationCenter.current().delegate = self
-        prepareSendNotifications()
-        application.registerForRemoteNotifications()
-        
-        if AppPreferences.getIsFirstRun(){
-            Utility.gotoHome()
+            MOLH.reset()
         }
         else{
-            AppPreferences.setIsFirstRun(value: true)
+            setupLaunch()
         }
         
         
+       
         return true
     }
     
@@ -43,7 +41,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable {
     }
     
     func reset() {
-        Utility.gotoHome()
+        setupLaunch()
+    }
+    
+    func setupLaunch(){
+        if AppPreferences.getIsFirstRun(){
+            Utility.gotoHome()
+        }
+        else{
+            AppPreferences.setIsFirstRun(value: true)
+            let initVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OnboardingViewController")
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = initVC
+        }
+        
     }
     
     func getPhoneLanguage() -> String{

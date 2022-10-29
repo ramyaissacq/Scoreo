@@ -41,15 +41,7 @@
 "Welcome!" = "Chào mừng!";
 "Football" = "Bóng đá";
 "Basketball" = "Bóng rổ";
-"Live Score Update" = "Cập nhật tỷ số trực tiếp";
-"Match Statistics" = "Thống kê trận đấu";
-"Experience the App" = "Trải nghiệm ứng dụng";
-"Welcome to corescore, Your one stop shop for all for sports needs" = "Chào mừng bạn đến với corecore, cửa hàng duy nhất của bạn cho tất cả các nhu cầu thể thao";
-"Keep yourself updated with all the major and minor legagues and matches around the world as well as league standings and individual player standings" = "Cập nhật cho mình tất cả các giải đấu và trận đấu lớn nhỏ trên khắp thế giới cũng như bảng xếp hạng giải đấu và bảng xếp hạng cầu thủ cá nhân";
-"Weather its NBA or any other basketball league, we will keep you updated with all the coming matches and results" = "Thời tiết NBA của nó hoặc bất kỳ giải đấu bóng rổ nào khác, chúng tôi sẽ cập nhật cho bạn tất cả các trận đấu và kết quả sắp tới";
-"Our state of the art score keeping system will keep you updated wherever you are" = "Hệ thống lưu giữ điểm hiện đại của chúng tôi sẽ cập nhật cho bạn mọi lúc mọi nơi";
-"Detail match analysis and statistics, goals scores, past results, future fixtures, fouls each and every major and minor statistics for every game are available" = "Có sẵn phân tích và thống kê chi tiết về trận đấu, tỷ số bàn thắng, kết quả trong quá khứ, lịch thi đấu trong tương lai, các lần phạm lỗi và mọi thống kê chính và nhỏ cho mỗi trận đấu đều có sẵn";
-"Enough hyping the app, Experience it yourself first hand" = "Đủ cường điệu về ứng dụng, Hãy tự mình trải nghiệm ứng dụng đó";
+
 "Privacy Policy" = "Chính sách bảo mật";
 "Language" = "Ngôn ngữ";
 "Share App" = "Chia sẻ ứng dụng";
@@ -199,3 +191,15 @@
 "CANCEL" = "SỰ HỦY BỎ";
 "DELAY" = "SỰ CHẬM TRỄ";
 "Settings" = "Cài đặt";
+
+"Welcome to 775Sports" = "Chào mừng đến với 775Sports";
+"Live Score Updates" = "Cập nhật tỷ số trực tiếp";
+"More Than Just an App" = "Không chỉ là một ứng dụng";
+
+"Jump into the action with our 24/7 coverage of the world's most popular sports! Don't miss a heartbeat as your favourite teams take the field and cheer them on to victory. You'll find everything from fixtures to predictions, player swaps, live coverage and more at 775Sports." = "Bắt đầu hành động với phạm vi bảo hiểm 24/7 của chúng tôi về các môn thể thao phổ biến nhất thế giới! Đừng bỏ lỡ nhịp tim khi các đội yêu thích của bạn ra sân và cổ vũ họ chiến thắng. Bạn sẽ tìm thấy mọi thứ từ lịch thi đấu đến dự đoán, hoán đổi người chơi, phạm vi bảo hiểm trực tiếp và hơn thế nữa tại 775Sports.";
+
+"As it happens! Follow the latest in the world of football from fixtures, to player stats and everything in between. See who the gods of football are smiling on with our expert analyses and how the odds are stacked for and agaist the teams." = "Khi nó xảy ra! Theo dõi những thông tin mới nhất trong thế giới bóng đá từ lịch thi đấu, đến số liệu thống kê của cầu thủ và mọi thứ ở giữa. Xem các vị thần bóng đá đang mỉm cười với ai với các phân tích chuyên môn của chúng tôi và tỷ lệ cược được xếp chồng lên nhau và làm hài lòng các đội như thế nào.";
+
+"As it happens! No more waiting for you! Follow live score updates as they happen for your favourite sports. Let's see if we can;'t make you feel like you're in the stadium. Just remember not to wake the neighbours with your cheering!" = "Khi nó xảy ra! Không còn chờ đợi cho bạn! Theo dõi cập nhật tỷ số trực tiếp khi chúng diễn ra cho các môn thể thao yêu thích của bạn. Hãy xem nếu chúng tôi có thể; không làm cho bạn cảm thấy như bạn đang ở trong sân vận động. Chỉ cần nhớ đừng đánh thức những người hàng xóm với sự cổ vũ của bạn!";
+
+"It isn't just an app, it's an experience. Join in the fun and gain access to over 1000 sports competitions worldwide. You name it, we provide it. See how your dream team stacks agains the competition and gain meaningful insights through our analyses and predictions.Come along with us, and you're in for a ride." = "Nó không chỉ là một ứng dụng, mà còn là một trải nghiệm. Tham gia vào niềm vui và giành quyền truy cập vào hơn 1000 cuộc thi thể thao trên toàn thế giới. Bạn đặt tên cho nó, chúng tôi cung cấp nó. Xem cách mà nhóm trong mơ của bạn giành được sự cạnh tranh và có được những hiểu biết sâu sắc có ý nghĩa thông qua các phân tích và dự đoán của chúng tôi.";

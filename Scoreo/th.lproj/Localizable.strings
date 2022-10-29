@@ -41,15 +41,7 @@
 "Welcome!" = "ยินดีต้อนรับ!";
 "Football" = "ฟุตบอล";
 "Basketball" = "บาสเกตบอล";
-"Live Score Update" = "อัพเดทคะแนนสด";
-"Match Statistics" = "สถิติการแข่งขัน";
-"Experience the App" = "สัมผัสประสบการณ์แอพ";
-"Welcome to corescore, Your one stop shop for all for sports needs" = "ยินดีต้อนรับสู่ corescore ร้านค้าครบวงจรสำหรับทุกความต้องการด้านกีฬาของคุณ";
-"Keep yourself updated with all the major and minor legagues and matches around the world as well as league standings and individual player standings" = "อัพเดทตัวเองด้วยลีกและการแข่งขันที่สำคัญและรองทั้งหมดทั่วโลกรวมถึงอันดับลีกและอันดับผู้เล่นแต่ละคน";
-"Weather its NBA or any other basketball league, we will keep you updated with all the coming matches and results" = "พยากรณ์อากาศของ NBA หรือลีกบาสเก็ตบอลอื่น ๆ เราจะแจ้งให้คุณทราบเกี่ยวกับการแข่งขันและผลการแข่งขันที่กำลังจะมาถึง";
-"Our state of the art score keeping system will keep you updated wherever you are" = "ระบบการเก็บคะแนนที่ทันสมัยของเราจะแจ้งให้คุณทราบทุกที่ที่คุณอยู่";
-"Detail match analysis and statistics, goals scores, past results, future fixtures, fouls each and every major and minor statistics for every game are available" = "การวิเคราะห์และสถิติการแข่งขันโดยละเอียด, คะแนนประตู, ผลการแข่งขันที่ผ่านมา, โปรแกรมการแข่งขันในอนาคต, สถิติการทำฟาวล์แต่ละรายการและทุกสถิติที่สำคัญและรองสำหรับทุกเกม";
-"Enough hyping the app, Experience it yourself first hand" = "พอ hyping แอพสัมผัสมันเองมือแรก";
+
 "Privacy Policy" = "นโยบายความเป็นส่วนตัว";
 "Language" = "ภาษา";
 "Share App" = "แชร์แอพ";
@@ -200,3 +192,15 @@
 "CANCEL" = "ยกเลิก";
 "DELAY" = "ล่าช้า";
 "Settings" = "การตั้งค่า";
+
+"Welcome to 775Sports" = "ยินดีต้อนรับสู่ 775Sports";
+"Live Score Updates" = "อัพเดทคะแนนสด";
+"More Than Just an App" = "เป็นมากกว่าแอพ";
+
+"Jump into the action with our 24/7 coverage of the world's most popular sports! Don't miss a heartbeat as your favourite teams take the field and cheer them on to victory. You'll find everything from fixtures to predictions, player swaps, live coverage and more at 775Sports." = "กระโจนเข้าสู่การแข่งขันด้วยการรายงานข่าวกีฬายอดนิยมของโลกตลอด 24 ชั่วโมงทุกวันไม่เว้นวันหยุด! อย่าพลาดจังหวะการเต้นของหัวใจในขณะที่ทีมโปรดของคุณลงสนามและเชียร์พวกเขาสู่ชัยชนะ คุณจะพบทุกสิ่งตั้งแต่การแข่งขันไปจนถึงการคาดการณ์ การแลกเปลี่ยนผู้เล่น การถ่ายทอดสด และอื่นๆ ที่ 775Sports";
+
+"As it happens! Follow the latest in the world of football from fixtures, to player stats and everything in between. See who the gods of football are smiling on with our expert analyses and how the odds are stacked for and agaist the teams." = "อย่างที่มันเกิดขึ้น! ติดตามข่าวสารล่าสุดในโลกของฟุตบอลตั้งแต่โปรแกรมการแข่งขัน สถิติผู้เล่น และทุกสิ่งที่เกี่ยวข้อง ดูว่าใครเป็นเทพเจ้าแห่งฟุตบอลยิ้มด้วยบทวิเคราะห์จากผู้เชี่ยวชาญของเราและวิธีรวบรวมอัตราต่อรองและต่อต้านทีม";
+
+"As it happens! No more waiting for you! Follow live score updates as they happen for your favourite sports. Let's see if we can;'t make you feel like you're in the stadium. Just remember not to wake the neighbours with your cheering!" = "อย่างที่มันเกิดขึ้น! ไม่ต้องรอคุณอีกต่อไป! ติดตามการอัปเดตคะแนนสดที่เกิดขึ้นสำหรับกีฬาที่คุณชื่นชอบ มาดูกันว่าเราทำได้ไม่ทำให้คุณรู้สึกเหมือนอยู่ในสเตเดียม เพียงจำไว้ว่าอย่าปลุกเพื่อนบ้านด้วยเสียงเชียร์ของคุณ!";
+
+"It isn't just an app, it's an experience. Join in the fun and gain access to over 1000 sports competitions worldwide. You name it, we provide it. See how your dream team stacks agains the competition and gain meaningful insights through our analyses and predictions.Come along with us, and you're in for a ride." = "ไม่ใช่แค่แอป แต่เป็นประสบการณ์ เข้าร่วมสนุกและเข้าถึงการแข่งขันกีฬากว่า 1,000 รายการทั่วโลก คุณชื่อมัน เราจัดให้ ดูว่าทีมในฝันของคุณเอาชนะคู่แข่งได้อย่างไร และรับข้อมูลเชิงลึกที่มีความหมายผ่านการวิเคราะห์และการคาดการณ์ของเรา มาร่วมกับเรา แล้วคุณจะพร้อมลุย";

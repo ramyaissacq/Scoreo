@@ -112,7 +112,7 @@ class ScoresView: UIView {
         cornerStack.isHidden = false
         cornerView.isHidden = false
         viewEvent.isHidden = false
-        lblName.text = obj?.leagueName
+        lblName.text = obj?.leagueNameShort
         lblHomeName.text = obj?.homeName
         lblAwayName.text = obj?.awayName
         lblScore.text = "\(obj?.homeScore ?? 0 ) : \(obj?.awayScore ?? 0)"
@@ -208,28 +208,28 @@ class ScoresView: UIView {
         indexViewYellow.isHidden = false
         switch Utility.getCurrentLang(){
         case "en":
-            lblName.text = obj?.leagueNameEn
+            lblName.text = obj?.leagueNameShortEn
             lblHomeName.text = obj?.homeTeamEn
             lblAwayName.text = obj?.awayTeamEn
         case "cn":
-            lblName.text = obj?.leagueNameCn
+            lblName.text = obj?.leagueNameShortCn
             lblHomeName.text = obj?.homeTeamNameCn
             lblAwayName.text = obj?.awayTeamNameCn
         case "id":
-            lblName.text = obj?.leagueNameId
+            lblName.text = obj?.leagueNameShortId
             lblHomeName.text = obj?.homeTeamNameId
             lblAwayName.text = obj?.awayTeamNameId
         case "vi":
-            lblName.text = obj?.leagueNameVi
+            lblName.text = obj?.leagueNameShortVi
             lblHomeName.text = obj?.homeTeamNameVi
             lblAwayName.text = obj?.awayTeamNameVi
             
         case "th":
-            lblName.text = obj?.leagueNameTh
+            lblName.text = obj?.leagueNameShortTh
             lblHomeName.text = obj?.homeTeamNameTh
             lblAwayName.text = obj?.awayTeamNameTh
         default:
-            lblName.text = obj?.leagueNameEn
+            lblName.text = obj?.leagueNameShortEn
             lblHomeName.text = obj?.homeTeamEn
             lblAwayName.text = obj?.awayTeamEn
         

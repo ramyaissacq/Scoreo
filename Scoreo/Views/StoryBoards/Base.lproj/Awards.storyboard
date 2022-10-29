@@ -21,7 +21,7 @@
         <!--Awards View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="AwardsViewController" id="Y6W-OH-hqX" customClass="AwardsViewController" customModule="Core_Score" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AwardsViewController" id="Y6W-OH-hqX" customClass="AwardsViewController" customModule="Scoreo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="38" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Sports" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afs-eR-Mhb">
-                                                                <rect key="frame" x="10" y="11" width="0.0" height="18.5"/>
+                                                                <rect key="frame" x="10" y="12.5" width="0.0" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -75,7 +75,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose League" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgD-Wc-o9G">
-                                                                <rect key="frame" x="10" y="11" width="336" height="18.5"/>
+                                                                <rect key="frame" x="10" y="12.5" width="336" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -204,7 +204,7 @@
                                 <rect key="frame" x="0.0" y="169" width="414" height="693"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Loading...Please wait a while!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDy-yx-Sb5">
-                                        <rect key="frame" x="112" y="406.5" width="190" height="18.5"/>
+                                        <rect key="frame" x="121.5" y="406.5" width="171.5" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                         <color key="textColor" name="gray1"/>
                                         <nil key="highlightedColor"/>
@@ -284,7 +284,7 @@
         <image name="downArrow2" width="11" height="7"/>
         <image name="downArrowWhite" width="11" height="7"/>
         <namedColor name="AccentColor">
-            <color red="1" green="0.37254901960784315" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.85490196078431369" green="0.27058823529411763" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="gray1">
             <color red="0.48627450980392156" green="0.50980392156862742" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

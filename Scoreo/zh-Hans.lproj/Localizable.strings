@@ -42,15 +42,7 @@
 "Welcome!" = "欢迎！";
 "Football" = "足球";
 "Basketball" = "篮球";
-"Live Score Update" = "实时比分更新";
-"Match Statistics" = "比赛统计";
-"Experience the App" = "体验应用程序";
-"Welcome to corescore, Your one stop shop for all for sports needs" = "欢迎来到 corescore，您一站式的全能足球篮球资讯应用";
-"Keep yourself updated with all the major and minor legagues and matches around the world as well as league standings and individual player standings" = "随时了解世界各地的所有联赛和比赛，以及联赛排名和个人球员排名";
-"Weather its NBA or any other basketball league, we will keep you updated with all the coming matches and results" = "无论 NBA 或任何其他篮球联赛，我们将让您了解所有即将到来的比赛和结果";
-"Our state of the art score keeping system will keep you updated wherever you are" = "无论您身在何处，我们最先进的记分系统都会让您随时了解最新情况";
-"Detail match analysis and statistics, goals scores, past results, future fixtures, fouls each and every major and minor statistics for every game are available" = "详细的比赛数据包含了分析和统计、进球得分、过去的结果、未来的赛程、犯规每场比赛，每个主要和次要统计数据等等";
-"Enough hyping the app, Experience it yourself first hand" = "我们不多说了，邀请您亲身体验。";
+
 "Privacy Policy" = "隐私政策";
 "Language" = "语言";
 "Share App" = "分享应用";
@@ -203,3 +195,15 @@
 "CANCEL" = "取消";
 "DELAY" = "延迟";
 "Settings" = "设置";
+
+"Welcome to 775Sports" = "欢迎来到 775Sports";
+"Live Score Updates" = "实时比分更新";
+"More Than Just an App" = "不仅仅是一个应用程序";
+
+"Jump into the action with our 24/7 coverage of the world's most popular sports! Don't miss a heartbeat as your favourite teams take the field and cheer them on to victory. You'll find everything from fixtures to predictions, player swaps, live coverage and more at 775Sports." = "通过我们对世界上最受欢迎的运动的 24/7 全天候报道，投入行动！当您最喜欢的球队上场并为胜利欢呼时，不要错过任何心跳。您可以在 775Sports 找到从赛程到预测、球员交换、现场报道等的所有内容。";
+
+"As it happens! Follow the latest in the world of football from fixtures, to player stats and everything in between. See who the gods of football are smiling on with our expert analyses and how the odds are stacked for and agaist the teams." = "当它发生的时候！关注足球世界的最新动态，从赛程到球员数据，以及介于两者之间的一切。通过我们的专家分析，了解足球之神对谁微笑，以及球队的胜算如何。";
+
+"As it happens! No more waiting for you! Follow live score updates as they happen for your favourite sports. Let's see if we can;'t make you feel like you're in the stadium. Just remember not to wake the neighbours with your cheering!" = "当它发生的时候！不再等你！关注您最喜欢的运动的实时比分更新。让我们看看我们是否可以；不要让你觉得你在体育场里。请记住不要用你的欢呼声吵醒邻居！";
+
+"It isn't just an app, it's an experience. Join in the fun and gain access to over 1000 sports competitions worldwide. You name it, we provide it. See how your dream team stacks agains the competition and gain meaningful insights through our analyses and predictions.Come along with us, and you're in for a ride." = "它不仅仅是一个应用程序，它是一种体验。加入乐趣并参加全球 1000 多项体育比赛。你的名字，我们提供。看看您的梦之队如何在竞争中脱颖而出，并通过我们的分析和预测获得有意义的见解。与我们一起，您将获得一席之地。";

@@ -249,6 +249,7 @@
 		AD62DD7428F6A33400730317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD7328F6A33400730317 /* Assets.xcassets */; };
 		AD62DD7728F6A75C00730317 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD7628F6A75C00730317 /* Roboto-Regular.ttf */; };
 		AD62DD7928F6A7D900730317 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD62DD7828F6A7D900730317 /* Roboto-Medium.ttf */; };
+		ADC7FD792904244E00237465 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADC7FD7B2904244E00237465 /* InfoPlist.strings */; };
 		ADDFA4A928FAA36E00CCF764 /* SportsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADDFA4A828FAA36E00CCF764 /* SportsView.xib */; };
 		ADDFA4AB28FAA39100CCF764 /* SportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDFA4AA28FAA39100CCF764 /* SportsView.swift */; };
 /* End PBXBuildFile section */
@@ -545,6 +546,11 @@
 		AD62DD7628F6A75C00730317 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		AD62DD7828F6A7D900730317 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		AD8FC2810333C212165D9AFB /* Pods_Scoreo_ScoreoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scoreo_ScoreoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADC7FD7A2904244E00237465 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ADC7FD7C2904245000237465 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		ADC7FD7D2904245200237465 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ADC7FD7E2904245300237465 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ADC7FD7F2904245300237465 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ADDFA4A828FAA36E00CCF764 /* SportsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SportsView.xib; sourceTree = "<group>"; };
 		ADDFA4AA28FAA39100CCF764 /* SportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsView.swift; sourceTree = "<group>"; };
 		C8730CD3E0843A6D5FED6391 /* Pods-Scoreo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scoreo.release.xcconfig"; path = "Target Support Files/Pods-Scoreo/Pods-Scoreo.release.xcconfig"; sourceTree = "<group>"; };
@@ -641,6 +647,7 @@
 				AD62DD6828F6A1D500730317 /* loading.json */,
 				AD62DD6A28F6A1D500730317 /* prize.json */,
 				AD2E3E6A28F7F0C900F41A60 /* Localizable.strings */,
+				ADC7FD7B2904244E00237465 /* InfoPlist.strings */,
 				AD62DAEE28F69AF300730317 /* LaunchScreen.storyboard */,
 				AD62DAF128F69AF300730317 /* Info.plist */,
 			);
@@ -1926,6 +1933,7 @@
 				AD62DC8C28F6A09500730317 /* Main.storyboard in Resources */,
 				AD62DCA728F6A09500730317 /* AnalysisHeaderTableViewCell.xib in Resources */,
 				AD62DCAF28F6A09500730317 /* LoaderTableViewCell.xib in Resources */,
+				ADC7FD792904244E00237465 /* InfoPlist.strings in Resources */,
 				AD62DCD928F6A09500730317 /* Dialogs.strings in Resources */,
 				AD62DC8628F6A09500730317 /* News.strings in Resources */,
 				AD62DD7928F6A7D900730317 /* Roboto-Medium.ttf in Resources */,
@@ -2442,6 +2450,18 @@
 			name = Dialogs.storyboard;
 			sourceTree = "<group>";
 		};
+		ADC7FD7B2904244E00237465 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADC7FD7A2904244E00237465 /* en */,
+				ADC7FD7C2904245000237465 /* zh-Hans */,
+				ADC7FD7D2904245200237465 /* id */,
+				ADC7FD7E2904245300237465 /* th */,
+				ADC7FD7F2904245300237465 /* vi */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -2565,8 +2585,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BF6BJ5B5VU;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2584,10 +2604,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.qooglobal.Scoreo;
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hkc.seven.five.sports.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = 775SportsDistribution;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2600,8 +2620,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BF6BJ5B5VU;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2619,10 +2639,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.qooglobal.Scoreo;
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hkc.seven.five.sports.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = 775SportsDistribution;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

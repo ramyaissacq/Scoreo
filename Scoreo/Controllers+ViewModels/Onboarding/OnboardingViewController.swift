@@ -10,9 +10,9 @@ import UIKit
 class OnboardingViewController: UIViewController {
     
     var current = 0
-    var titles = ["Welcome!".localized,"Football".localized,"Basketball".localized,"Live Score Update".localized,"Match Statistics".localized,"Experience the App".localized]
+    var titles = ["Welcome to 775Sports".localized,"Football".localized,"Live Score Updates".localized,"More Than Just an App".localized]
     
-    var descriptions = ["Welcome to corescore, Your one stop shop for all for sports needs".localized,"Keep yourself updated with all the major and minor legagues and matches around the world as well as league standings and individual player standings".localized,"Weather its NBA or any other basketball league, we will keep you updated with all the coming matches and results".localized,"Our state of the art score keeping system will keep you updated wherever you are".localized,"Detail match analysis and statistics, goals scores, past results, future fixtures, fouls each and every major and minor statistics for every game are available".localized,"Enough hyping the app, Experience it yourself first hand".localized]
+    var descriptions = ["Jump into the action with our 24/7 coverage of the world's most popular sports! Don't miss a heartbeat as your favourite teams take the field and cheer them on to victory. You'll find everything from fixtures to predictions, player swaps, live coverage and more at 775Sports.".localized,"As it happens! Follow the latest in the world of football from fixtures, to player stats and everything in between. See who the gods of football are smiling on with our expert analyses and how the odds are stacked for and agaist the teams.".localized,"As it happens! No more waiting for you! Follow live score updates as they happen for your favourite sports. Let's see if we can;'t make you feel like you're in the stadium. Just remember not to wake the neighbours with your cheering!".localized,"It isn't just an app, it's an experience. Join in the fun and gain access to over 1000 sports competitions worldwide. You name it, we provide it. See how your dream team stacks agains the competition and gain meaningful insights through our analyses and predictions.Come along with us, and you're in for a ride.".localized]
     
     @IBOutlet weak var collectionView: UICollectionView!
     
